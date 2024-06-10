@@ -1,0 +1,293 @@
+@font-face {
+    font-family: MerriweatherSans;
+    src: url(../../fonts/MerriweatherSans-Bold.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: MerriweatherSans;
+}
+
+input{
+    cursor: pointer;
+}
+
+header{
+    height: 100vh;
+}
+
+nav{
+    width: 100vw;
+    max-width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#social-links{
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#see-articles{
+    margin-left: 20px;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+nav > div > input{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 100%;
+    border: 0px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: transparent;
+}
+
+#github{
+    background-image: url(../../img/github.png);
+}
+    
+#linkedin{
+    background-image: url(../../img/linkedin.png);
+}
+
+
+
+.navigate{
+    display: none;
+}
+
+h1{
+    margin: auto;
+    margin-top: 5vh;
+    text-align: center;
+    font-size: 25px;
+    width: 90vw;
+}
+
+#emphasis-title{
+    display: block;
+    font-size: 72px;
+}
+
+#skills{
+    margin: auto;
+    margin-top: 5vh;
+    width: 80vw;
+    height: 70px;
+    background-image: url(../../img/langs.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.skill{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#image{
+    margin: auto;
+    margin-top: 6vh;
+    width: 80vw;
+    height: 35vh;
+    border-radius: 48px;
+    background-image: url(../../img/code-decoration.png);
+    background-repeat: no-repeat;
+    background-size: 130%;
+}
+
+#more-skills{
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+h2{
+    margin: auto;
+    width: 90vw;
+    text-align: center;
+    font-size: 44px;
+}
+
+#others-skills{
+    margin: auto;
+    margin-top: 8vh;
+    width: 90vw;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 25px;
+    row-gap: 25px;
+}
+
+.skill{
+    width: 100px;
+    height: 50px;
+    border-radius: 48px;
+}
+
+.project{
+    padding-top: 5vh;
+    height: 95vh;
+}
+
+.project-description{
+    margin: auto;
+    margin-top: 2vh;
+    width: 85vw;
+    text-align: center;
+}
+
+.image-project{
+    margin: auto;
+    margin-top: 8vh;
+    width: 80vw;
+    height: 30vh;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#image-desktop-project{
+    background-image: url(../../img/laptop.png);
+}
+
+.project-buttons{
+    margin: auto;
+    margin-top: 10vh;
+    width: 90vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.project-button{
+    width: 150px;
+    height: 50px;
+    border: 0px;
+    border-radius: 48px;
+}
+
+#image-mobile-project{
+    background-image: url(../../img/cellphone.png);
+}
+
+#projects{
+    margin: auto;
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.other-project{
+    display: flex;
+    width: 320px;
+    height: 213px;
+    justify-content: center;
+    align-items: center;
+}
+
+.more-other-project{
+    width: 100%;
+    height: 100%;
+}
+
+.more-description{
+    margin-left: 10px;
+    margin-top: 2vh;
+}
+
+.more-lang{
+    margin-left: 10px;
+    margin-top: 3vh;
+    padding: 8px;
+    width: 80px;
+}
+
+.react-native{
+    width: 110px;
+}
+
+.github-link{
+    border: 0px;
+    padding: 8px;
+    margin-top: 4vh;
+    margin-left: 10px;
+    width: 45%;
+}
+
+.deploy-link{
+    border: 0px;
+    padding: 8px;
+    margin-top: 4vh;
+    margin-left: 10px;
+    width: 45%;
+}
+
+.other-project > p {
+    display: block;
+}
+
+.more-other-project{
+    display: none;
+}
+
+#about-me{
+    padding-top: 5vh;
+    height: 95vh;
+}
+
+h3{
+    margin: auto;
+    margin-top: 8vh;
+    width: 85vw;
+    font-size: 22px;
+    text-align: center  ;
+}
+
+ul{
+    margin: auto;
+    width: 85vw;
+    text-align: center;
+}
+
+li{
+    list-style: none;
+    margin-top: 2vh;
+}
+
+#image-decoration{
+    margin: auto;
+    margin-top: 7vh;
+    width: 85vw;
+    height: 30vh;
+    border-radius: 48px;
+}
+
+footer{
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+footer > p {
+    margin: auto;
+    width: 90vw;
+    text-align: center;
+}
+
+p#rights{
+    margin-top: 2vh;
+}

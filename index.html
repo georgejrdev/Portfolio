@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="css/index/index.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <p id="see-articles">ver artigos</p>
+
+            <p class="navigate">projetos</p>
+            <p class="navigate">sobre mim</p>
+            <p class="navigate">contato</p>
+
+            <div id="social-links">
+                <input onclick="window.open('https://github.com/georgejrdev','_blank')" id="github" type="button" value="">
+                <input onclick="window.open('https://www.linkedin.com/in/georgejrdev/', '_blank')" id="linkedin" type="button" value="">
+            </div>
+        </nav>
+
+        <div id="description">
+            <h1>meu nome é George Júnior, <span id="emphasis-title">FullStack</span> developer</h1>
+
+            <div id="skills"></div>
+        </div>
+        
+        <div id="image"></div>
+    </header>
+
+    <main>
+        <section id="more-skills">
+            <h2>Habilidades</h2>
+
+            <div id="others-skills">
+                <div class="skill"><p>JAVA</p></div>
+                <div class="skill"><p>SPRING</p></div>
+                <div class="skill"><p>TS</p></div>
+                <div class="skill"><p>JS</p></div>
+                <div class="skill"><p>R. NATIVE</p></div>
+                <div class="skill"><p>VUE JS</p></div>
+                <div class="skill"><p>GIT</p></div>
+                <div class="skill"><p>DOCKER</p></div>
+                <div class="skill"><p>CLOUD</p></div>
+                <div class="skill"><p>GESTÃO</p></div>
+                <div class="skill"><p>EQUIPE</p></div>
+                <div class="skill"><p>PYTHON</p></div>
+                <div class="skill"><p>FLASK</p></div>
+                <div class="skill"><p>PHP</p></div>
+                <div class="skill"><p>LARAVEL</p></div>
+                <div class="skill"><p>AGILE</p></div>
+                <div class="skill"><p>DATABASE</p></div>
+                <div class="skill"><p>DESIGN</p></div>
+                <div class="skill"><p>SCRUM</p></div>
+                <div class="skill"><p>LIDER</p></div>
+                <div class="skill"><p>REST</p></div>
+                <div class="skill"><p>RPC</p></div>
+                <div class="skill"><p>GRAPHQL</p></div>
+                <div class="skill"><p>MVC</p></div>
+            </div>
+        </section>
+
+        <section class="project" id="desktop-project">
+            <h2>ToolKit-CLI</h2>
+            <p class="project-description">oxi vei cara eu nao sei o que escrever aqui pra testar essa porra de espaço cara é uma sacanagem isso ai man po ta ligado isso ai é ta no erro po ta de sacanagem faz o L.</p>
+
+            <div class="image-project" id="image-desktop-project"></div>
+
+            <div class="project-buttons">
+                <input onclick="window.open('https://github.com/georgejrdev/ToolKit-Development/','_blank')" class="project-button project-github" type="button" value="GITHUB">
+                <input onclick="window.open('https://github.com/georgejrdev/ToolKit-Development/','_blank')" class="project-button project-deploy" type="button" value="DEPLOY">
+            </div>
+        </section>
+
+        <section class="project" id="mobile-project">
+            <h2>Post Its</h2>
+            <p class="project-description">oxi vei cara eu nao sei o que escrever aqui pra testar essa porra de espaço cara é uma sacanagem isso ai man po ta ligado isso ai é ta no erro po ta de sacanagem faz o L.</p>
+
+            <div class="image-project" id="image-mobile-project"></div>
+
+            <div class="project-buttons">
+                <input onclick="window.open('https://github.com/georgejrdev/Post-Its','_blank')" class="project-button project-github" type="button" value="GITHUB">
+                <input onclick="window.open('https://play.google.com/store/apps/details?id=com.georgejrdev.postits&pcampaignid=web_share','_blank')"class="project-button project-deploy" type="button" value="DEPLOY">
+            </div>
+        </section>
+
+        <section id="others-projects">
+            <div id="projects">
+                <div onmouseover="showMoreInfo(event,'path')" onmouseout="hideMoreInfo(event,'path')" class="other-project">
+                    <p>PATH</p>
+                    <div id="path" class="more-other-project">
+                        <p class="more-description">Um site feito para guiar iniciantes na área de TI, mostrando um caminho à seguir com material de referência.</p>
+                        <p class="more-lang vuejs">VueJs</p>
+                        <input onclick="window.open('https://github.com/georgejrdev/Path','_blank')" class="github-link" type="button" value="GitHub">
+                        <input onclick="window.open('https://dev-path-io.vercel.app/','_blank')" class="deploy-link" type="button" value="Deploy">
+                    </div>
+                </div>
+
+                <div onmouseover="showMoreInfo(event,'hamburgueria')" onmouseout="hideMoreInfo(event,'hamburgueria')" class="other-project">
+                    <p>HAMBURGUERIA</p>
+                    <div id="hamburgueria" class="more-other-project">
+                        <p class="more-description">Criação de um site moderno para uma hamburgueria, destacando o menu, a história e as informações de contato.</p>
+                        <p class="more-lang vuejs">VueJs</p>
+                        <input onclick="window.open('https://github.com/georgejrdev/Hamburgueria','_blank')" class="github-link" type="button" value="GitHub">
+                        <input onclick="window.open('','_blank')" class="deploy-link" type="button" value="Deploy">
+                    </div>
+                </div>
+
+                <div onmouseover="showMoreInfo(event,'mario')" onmouseout="hideMoreInfo(event,'mario')" class="other-project">
+                    <p>MARIO</p>
+                    <div id="mario" class="more-other-project">
+                        <p class="more-description">Uma nova forma de jogar Super Mario: utilize movimentos reais usando uma câmera para jogar.</p>
+                        <p class="more-lang python">Python</p>
+                        <input onclick="window.open('https://github.com/georgejrdev/Mario-Mocap-Control','_blank')" class="github-link" type="button" value="GitHub">
+                    </div>
+                </div>
+
+                <div onmouseover="showMoreInfo(event,'translate-api')" onmouseout="hideMoreInfo(event,'translate-api')" class="other-project">
+                    <p>TRANSLATE API</p>
+                    <div id="translate-api" class="more-other-project">
+                        <p class="more-description">Uma API de tradução, feita pra um acesso simples e rápido.</p>
+                        <p class="more-lang python">Python</p>
+                        <input onclick="window.open('https://github.com/georgejrdev/Translate-API','_blank')" class="github-link" type="button" value="GitHub">
+                    </div>
+                </div>
+
+                <div onmouseover="showMoreInfo(event,'games-online')" onmouseout="hideMoreInfo(event,'games-online')" class="other-project">
+                    <p>GAMES ONLINE</p>
+                    <div id="games-online" class="more-other-project">
+                        <p class="more-description">Um site que agrega jogos de navegador, com sitema de pontuação individual para cada jogo.</p>
+                        <p class="more-lang vuejs">VueJs</p>
+                        <input onclick="window.open('https://github.com/georgejrdev/Games-Online','_blank')" class="github-link" type="button" value="GitHub">
+                        <input onclick="window.open('','_blank')" class="deploy-link" type="button" value="Deploy">
+                    </div>
+                </div>
+
+                <div onmouseover="showMoreInfo(event,'organizador-pastas')" onmouseout="hideMoreInfo(event,'organizador-pastas')" class="other-project">
+                    <p>ORGANIZADOR DE PASTAS</p>
+                    <div id="organizador-pastas" class="more-other-project">
+                        <p class="more-description">Ferramenta para organizar arquivos, facilitando a busca e a classificação dos arquivos.</p>
+                        <p class="more-lang python">Python</p>
+                        <input onclick="window.open('https://github.com/georgejrdev/Automatic-Folder-Organizer','_blank')" class="github-link" type="button" value="GitHub">
+                    </div>
+                </div>
+
+                <div onmouseover="showMoreInfo(event,'notify-hub')" onmouseout="hideMoreInfo(event,'notify-hub')" class="other-project">
+                    <p >NOTIFY HUB</p>
+                    <div id="notify-hub" class="more-other-project">
+                        <p class="more-description">Ferramenta para organizar arquivos, facilitando a busca e a classificação dos arquivos.</p>
+                        <p class="more-lang java">Java</p>
+                        <input onclick="window.open('https://github.com/georgejrdev/Notify-Hub','_blank')" class="github-link" type="button" value="GitHub">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-me">
+            <h2>Sobre mim</h2>
+
+            <p class="project-description">oxi vei cara eu nao sei o que escrever aqui pra testar essa porra de espaço cara é uma sacanagem isso ai man po ta ligado isso ai é ta no erro po ta de sacanagem faz o L.</p>
+
+            <h3>Formação</h3>
+
+            <ul>
+                <li>Superior em Análise e Desenvolvimento de Sistemas</li>
+                <li>Técnicno em Desenvolvimento de Sistemas</li>
+            </ul>
+
+            <div id="image-decoration"></div>
+        </section>
+
+        <section id="contact">
+            <h2>Contato</h2>
+            <h3>Vamos trabalhar juntos?</h3>
+            <p>ctt.georgejr@gmail.com</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>feito com <span class="footer-emphasis">Vue JS</span></p>
+        <p id="rights">© 2024 - George Júnior. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/showMoreInfo.js"></script>
+</body>
+</html>

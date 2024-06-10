@@ -1,0 +1,269 @@
+:root{
+    --background: #312E39;
+    --nav-background: #1C1B21;
+    --see-articles: linear-gradient(130deg, #F1C8FF 0%, #CC45FC 43%, #B603F4 100%);
+    --text: #FFF;
+    --emphasis-title: #CB9630;
+    --background-image: #2B2932;
+    --section-title: #E1C286;
+    --project-button-text: #FFD2D2;
+    --github: #2C2C2C;
+    --deploy: #5A5A5A;
+    --python: #153380;
+    --vuejs: #17631F;
+    --java: #C96A14;
+    --react-native: #4D6FCA;
+    --php: #6E14C9;
+}
+
+body{
+    background-color: var(--background);
+}
+
+nav{
+    background-color: var(--nav-background);
+}
+
+#see-articles{
+    background: var(--see-articles);
+    color: transparent;
+}
+
+nav > div > input {
+    color: var(--text);
+}
+
+nav > p {
+    color: var(--text);
+}
+
+h1{
+    color: var(--text);
+}
+
+#emphasis-title{
+    color: var(--emphasis-title);
+}
+
+#image{
+    background-color: var(--background-image);
+}
+
+h2 {
+    color: var(--section-title);
+}
+
+.skill:nth-of-type(1){
+    background-color: #945DFF;
+}
+
+.skill:nth-of-type(2){
+    background-color: #4E7896;
+}
+
+.skill:nth-of-type(3){
+    background-color: #F58219;
+}
+
+.skill:nth-of-type(4){
+    background-color: #41B883;
+}
+
+.skill:nth-of-type(5){
+    background-color: #5282FF;
+}
+
+.skill:nth-of-type(6){
+    background-color: #A54646;
+}
+
+.skill:nth-of-type(7){
+    background-color: #E498FF;
+}
+
+.skill:nth-of-type(8){
+    background-color: #B06D6D;
+}
+
+.skill:nth-of-type(9){
+    background-color: #FFA451;
+}
+
+.skill:nth-of-type(10){
+    background-color: #9B76E2;
+}
+
+.skill:nth-of-type(11){
+    background-color: #249782;
+}
+
+.skill:nth-of-type(12){
+    background-color: #4D8EB2;
+}
+
+.skill:nth-of-type(13){
+    background-color: #FF7397;
+}
+
+.skill:nth-of-type(14){
+    background-color: #6D81A8;
+}
+
+.skill:nth-of-type(15){
+    background-color: #FF9F3D;
+}
+
+.skill:nth-of-type(16){
+    background-color: #5CB15D;
+}
+
+.skill:nth-of-type(17){
+    background-color: #639FFF;
+}
+
+.skill:nth-of-type(18){
+    background-color: #AA5555;
+}
+
+.skill:nth-of-type(19){
+    background-color: #FFB4FF;
+}
+
+.skill:nth-of-type(20){
+    background-color: #BF8F8F;
+}
+
+.skill:nth-of-type(21){
+    background-color: #FFB97E;
+}
+
+.skill:nth-of-type(22){
+    background-color: #AB8ED6;
+}
+
+.skill:nth-of-type(23){
+    background-color: #36BFA1;
+}
+
+.skill:nth-of-type(24){
+    background-color: #6EA2C8;
+}
+
+p{
+    color: var(--text);
+}
+
+.project-button{
+    color: var(--project-button-text);
+}
+
+.project-github{
+    background-color: var(--github);
+}
+
+.project-deploy{
+    background-color: var(--deploy);
+}
+
+.other-project:nth-of-type(1){
+    background-color: #2B4542;
+}
+
+.other-project:nth-of-type(2){
+    background-color: #603535;
+}
+
+.other-project:nth-of-type(3){
+    background-color: #2F5C9E;
+}
+
+.other-project:nth-of-type(4){
+    background-color: #A45331;
+}
+
+.other-project:nth-of-type(5){
+    background-color: #A8BDBE;
+}
+
+.other-project:nth-of-type(6){
+    background-color: #94A045;
+}
+
+.other-project:nth-of-type(7){
+    background-color: #D9D9D9;
+}
+
+.other-project > p {
+    color: #000;
+}
+
+.more-other-project{
+    background-color: #E4D4F3;
+}
+
+.more-description{
+    color: #000;
+}
+
+.more-lang{
+    color: var(--text);
+}
+
+.github-link{
+    background-color: #000;
+    color: #FFF;
+}
+
+.python{
+    background-color: var(--python);
+}
+
+.java{
+    background-color: var(--java);
+}
+
+.vuejs{
+    background-color: var(--vuejs);
+}
+
+.react-native{
+    background-color: var(--react-native);
+}
+
+.php{
+    background-color: var(--php);
+}
+
+h3{
+    color:var(--section-title);
+}
+
+li{
+    color: #FFF;
+}
+
+#image-decoration{
+    background-color: var(--background-image);
+}
+
+#contact{
+    padding-top: 30vh;
+    height: 70vh;
+}
+
+#contact > p {
+    margin-top: 5vh;
+    text-align: center;
+}
+
+footer{
+    background-color: var(--nav-background);
+}
+
+.footer-emphasis{
+    color: #22947F;
+}
+
+footer > p {
+    color: #909090;
+}
