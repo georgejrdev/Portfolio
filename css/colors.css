@@ -29,6 +29,10 @@ nav{
     color: transparent;
 }
 
+.navigate:hover{
+    color: #d1bbbb;
+}
+
 nav > div > input {
     color: var(--text);
 }
@@ -163,6 +167,10 @@ p{
 
 .project-deploy{
     background-color: var(--deploy);
+}
+
+#others-projects > h2 {
+    color: #1e1d22;
 }
 
 .other-project:nth-of-type(1){

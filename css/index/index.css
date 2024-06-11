@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     font-family: MerriweatherSans;
+    scroll-behavior: smooth;
 }
 
 input{
@@ -39,7 +40,7 @@ nav{
     background-clip: text;
 }
 
-nav > div > input{
+nav > div > div > input{
     display: inline-block;
     width: 40px;
     height: 40px;
@@ -60,7 +61,9 @@ nav > div > input{
     background-image: url(../../img/linkedin.png);
 }
 
-
+#extra-navigate-buttons{
+    display: none;
+}
 
 .navigate{
     display: none;
@@ -87,6 +90,7 @@ h1{
     background-image: url(../../img/langs.png);
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center;
 }
 
 .skill{
@@ -185,6 +189,7 @@ h2{
 
 #projects{
     margin: auto;
+    margin-top: 8vh;
     width: 90vw;
     display: flex;
     flex-wrap: wrap;
@@ -198,6 +203,13 @@ h2{
     height: 213px;
     justify-content: center;
     align-items: center;
+}
+
+#others-projects > h2 {
+    margin: 0 auto;
+    width: 90vw;
+    text-align: center;
+    font-size: 40px;
 }
 
 .more-other-project{
@@ -271,10 +283,13 @@ li{
 
 #image-decoration{
     margin: auto;
-    margin-top: 7vh;
+    margin-top: 10vh;
     width: 85vw;
     height: 30vh;
     border-radius: 48px;
+    background-image: url(../../img/code-decoration-1.png);
+    background-repeat: no-repeat;
+    background-size: 130%;
 }
 
 footer{

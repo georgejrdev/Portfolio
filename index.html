@@ -6,29 +6,36 @@
     <title>Portfólio</title>
     <link rel="stylesheet" href="css/colors.css">
     <link rel="stylesheet" href="css/index/index.css">
+    <link rel="stylesheet" href="css/index/desktop.css"  media="screen and (min-width: 1024px)">
 </head>
 <body>
     <header>
+        <div id="placeholder"></div>
+
         <nav>
             <p id="see-articles">ver artigos</p>
 
-            <p class="navigate">projetos</p>
-            <p class="navigate">sobre mim</p>
-            <p class="navigate">contato</p>
-
-            <div id="social-links">
-                <input onclick="window.open('https://github.com/georgejrdev','_blank')" id="github" type="button" value="">
-                <input onclick="window.open('https://www.linkedin.com/in/georgejrdev/', '_blank')" id="linkedin" type="button" value="">
+            <div id="navigate-buttons">
+                <div id="extra-navigate-buttons">
+                    <p onclick="scrollToSection('desktop-project')" class="navigate">projetos</p>
+                    <p onclick="scrollToSection('about-me')" class="navigate">sobre mim</p>
+                    <p onclick="scrollToSection('contact')" class="navigate">contato</p>
+                </div>
+                <div id="social-links">
+                    <input onclick="window.open('https://github.com/georgejrdev','_blank')" id="github" type="button" value="">
+                    <input onclick="window.open('https://www.linkedin.com/in/georgejrdev/', '_blank')" id="linkedin" type="button" value="">
+                </div>
             </div>
         </nav>
 
-        <div id="description">
-            <h1>meu nome é George Júnior, <span id="emphasis-title">FullStack</span> developer</h1>
-
-            <div id="skills"></div>
+        <div id="content">
+            <div id="description">
+                <h1>meu nome é George Júnior, <span id="emphasis-title">FullStack</span> developer</h1>
+                <div id="skills"></div>
+            </div>
+            
+            <div id="image"></div>
         </div>
-        
-        <div id="image"></div>
     </header>
 
     <main>
@@ -65,20 +72,20 @@
 
         <section class="project" id="desktop-project">
             <h2>ToolKit-CLI</h2>
-            <p class="project-description">oxi vei cara eu nao sei o que escrever aqui pra testar essa porra de espaço cara é uma sacanagem isso ai man po ta ligado isso ai é ta no erro po ta de sacanagem faz o L.</p>
-
+            <p class="project-description">O ToolKit-dev CLI é essencial para desenvolvedores. Gerencie tarefas com uma lista de afazeres, traduza textos instantaneamente e utilize um chat com I.A. para suporte inteligente. Aumente sua produtividade com esta poderosa ferramenta.</p>
+        
             <div class="image-project" id="image-desktop-project"></div>
-
+        
             <div class="project-buttons">
                 <input onclick="window.open('https://github.com/georgejrdev/ToolKit-Development/','_blank')" class="project-button project-github" type="button" value="GITHUB">
                 <input onclick="window.open('https://github.com/georgejrdev/ToolKit-Development/','_blank')" class="project-button project-deploy" type="button" value="DEPLOY">
             </div>
         </section>
+        
 
         <section class="project" id="mobile-project">
             <h2>Post Its</h2>
-            <p class="project-description">oxi vei cara eu nao sei o que escrever aqui pra testar essa porra de espaço cara é uma sacanagem isso ai man po ta ligado isso ai é ta no erro po ta de sacanagem faz o L.</p>
-
+            <p class="project-description">O Post Its é o app ideal para capturar ideias e lembretes rapidamente. Com interface intuitiva, permite criar, organizar e personalizar notas facilmente. Use cores, adicione alarmes e sincronize entre dispositivos. Perfeito para tarefas, ideias e lembretes diários.</p>
             <div class="image-project" id="image-mobile-project"></div>
 
             <div class="project-buttons">
@@ -88,6 +95,8 @@
         </section>
 
         <section id="others-projects">
+            <h2>passe o mouse nos projetos</h2>
+
             <div id="projects">
                 <div onmouseover="showMoreInfo(event,'path')" onmouseout="hideMoreInfo(event,'path')" class="other-project">
                     <p>PATH</p>
@@ -158,16 +167,15 @@
         </section>
 
         <section id="about-me">
-            <h2>Sobre mim</h2>
-
-            <p class="project-description">oxi vei cara eu nao sei o que escrever aqui pra testar essa porra de espaço cara é uma sacanagem isso ai man po ta ligado isso ai é ta no erro po ta de sacanagem faz o L.</p>
-
-            <h3>Formação</h3>
-
-            <ul>
-                <li>Superior em Análise e Desenvolvimento de Sistemas</li>
-                <li>Técnicno em Desenvolvimento de Sistemas</li>
-            </ul>
+            <div id="about-content">
+                <h2>Sobre mim</h2>
+                <p class="project-description">Sou um programador fullstack com quase 4 anos de experiência, apaixonado por aprender e evoluir constantemente. Adoro desafios de gestão e liderança, unindo minha paixão pela tecnologia à habilidade de inspirar e coordenar equipes.</p>
+                <h3>Formação</h3>
+                <ul>
+                    <li>Superior em Análise e Desenvolvimento de Sistemas</li>
+                    <li>Técnico em Desenvolvimento de Sistemas</li>
+                </ul>
+            </div>
 
             <div id="image-decoration"></div>
         </section>
@@ -184,6 +192,8 @@
         <p id="rights">© 2024 - George Júnior. Todos os direitos reservados.</p>
     </footer>
 
+    <script src="js/changeOrderElements.js"></script>
+    <script src="js/navigate.js"></script>
     <script src="js/showMoreInfo.js"></script>
 </body>
 </html>
