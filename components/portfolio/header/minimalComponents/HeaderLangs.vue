@@ -26,7 +26,7 @@
         div{
             margin: 0;
             margin-top: 5vh;
-            height: 50px;
+            height: 55px;
             background-position: initial;
         }
     }
