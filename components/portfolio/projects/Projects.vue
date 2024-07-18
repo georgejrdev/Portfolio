@@ -7,7 +7,7 @@
                 :idContent="'project-path'"
                 :idAbout="'about-path'"
                 :description="'Um site feito para guiar iniciantes na área de TI, mostrando um caminho à seguir com material de referência.'"
-                :urlImage="'/_nuxt/assets/images/projects/path.jpg'"
+                :urlImage="pathImage"
                 :github="true"
                 :urlGithub="'https://github.com/georgejrdev/Path'"
                 :deployed="true"
@@ -19,7 +19,7 @@
                 :idContent="'project-hamburgueria'"
                 :idAbout="'about-hamburgueria'"
                 :description="'Criação de um site moderno para uma hamburgueria, destacando o menu, a história e as informações de contato.'"
-                :urlImage="'/_nuxt/assets/images/projects/hamburgueria.jpg'"
+                :urlImage="hamburgueriaImage"
                 :github="true"
                 :urlGithub="'https://github.com/georgejrdev/Hamburgueria'"
                 :deployed="true"
@@ -31,7 +31,7 @@
                 :idContent="'project-mario'"
                 :idAbout="'about-mario'"
                 :description="'Uma nova forma de jogar Super Mario: utilize movimentos reais usando uma câmera para jogar.'"
-                :urlImage="'/_nuxt/assets/images/projects/mario.jpg'"
+                :urlImage="marioImage"
                 :github="true"
                 :urlGithub="'https://github.com/georgejrdev/Mario-Mocap-Control'"
                 :lang="'Python'"
@@ -41,7 +41,7 @@
                 :idContent="'project-games-online'"
                 :idAbout="'about-games-online'"
                 :description="'Um site que agrega jogos de navegador, com sistema de pontuação individual para cada jogo.'"
-                :urlImage="'/_nuxt/assets/images/projects/games-online.jpg'"
+                :urlImage="gamesOnlineImage"
                 :github="true"
                 :urlGithub="'https://github.com/georgejrdev/Games-Online'"
                 :deployed="true"
@@ -53,7 +53,7 @@
                 :idContent="'project-organizador-pastas'"
                 :idAbout="'about-organizador-pastas'"
                 :description="'Ferramenta para organizar arquivos, facilitando a busca e a classificação dos arquivos.'"
-                :urlImage="'/_nuxt/assets/images/projects/organizador-de-pastas.jpg'"
+                :urlImage="organizadorPastasImage"
                 :github="true"
                 :urlGithub="'https://github.com/georgejrdev/Automatic-Folder-Organizer'"
                 :lang="'Python'"
@@ -63,7 +63,7 @@
                 :idContent="'project-notify-hub'"
                 :idAbout="'about-notify-hub'"
                 :description="'Ferramenta para organizar arquivos, facilitando a busca e a classificação dos arquivos.'"
-                :urlImage="'/_nuxt/assets/images/projects/notify-hub.jpg'"
+                :urlImage="notifyHubImage"
                 :github="true"
                 :urlGithub="'https://github.com/georgejrdev/Notify-Hub'"
                 :lang="'Java'"
@@ -73,7 +73,7 @@
                 :idContent="'project-city-info'"
                 :idAbout="'about-city-info'"
                 :description="'API que fornece um agregado de informações climáticas e notícias de uma cidade.'"
-                :urlImage="'/_nuxt/assets/images/projects/info-city.jpg'"
+                :urlImage="cityInfoImage"
                 :github="true"
                 :urlGithub="'https://github.com/georgejrdev/City-Info-API'"
                 :deployed="true"
@@ -85,7 +85,7 @@
                 :idContent="'project-rating-system'"
                 :idAbout="'about-rating-system'"
                 :description="'Um gerenciador de avaliações. Crie e organize questões por setores para seus funcionários.'"
-                :urlImage="'/_nuxt/assets/images/projects/rating-system.jpg'"
+                :urlImage="ratingSystemImage"
                 :github="true"
                 :urlGithub="'https://github.com/georgejrdev/Rating-System'"
                 :deployed="true"
@@ -97,26 +97,30 @@
                 :idContent="'project-audiobook-generator'"
                 :idAbout="'about-audiobook-generator'"
                 :description="'Gere áudio através de um PDF de forma simples e eficiente utilizando bibliotecas de Python.'"
-                :urlImage="'/_nuxt/assets/images/projects/audiobook-generator.jpg'"
+                :urlImage="audiobookGeneratorImage"
                 :github="true"
                 :urlGithub="'https://github.com/georgejrdev/AudioBook-Generator'"
                 :deployed="true"
                 :urlDeploy="'https://audiobook-generator-chi.vercel.app/'"
                 :lang="'Python'"
             />
-
         </div>
     </section>
 </template>
 
-
 <script lang="ts" setup>
-
+    import pathImage from '~/assets/images/projects/path.jpg'
+    import hamburgueriaImage from '~/assets/images/projects/hamburgueria.jpg'
+    import marioImage from '~/assets/images/projects/mario.jpg'
+    import gamesOnlineImage from '~/assets/images/projects/games-online.jpg'
+    import organizadorPastasImage from '~/assets/images/projects/organizador-de-pastas.jpg'
+    import notifyHubImage from '~/assets/images/projects/notify-hub.jpg'
+    import cityInfoImage from '~/assets/images/projects/info-city.jpg'
+    import ratingSystemImage from '~/assets/images/projects/rating-system.jpg'
+    import audiobookGeneratorImage from '~/assets/images/projects/audiobook-generator.jpg'
 </script>
 
-
 <style scoped>
-
     section{
         margin-bottom: 5vh;
     }
