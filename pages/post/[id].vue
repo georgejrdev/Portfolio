@@ -94,24 +94,25 @@
 
     #theme{
         background-image: url("~/assets/images/theme.png");
+        top: 20px;
+        right: 15px;
     }
 
     #back {
-        top: 10px;
+        top: 20px;
+        right: 60px;
         background-image: url("~/assets/images/back.png");
     }
 
     input {
         position: absolute;
-        top: 80px;
-        right: 10px;
         border: 2px solid black;
         border-radius: 100%;
         width: 40px;
         height: 40px;
         background-position: center;
         background-repeat: no-repeat;
-        background-size: 80%;
+        background-size: cover;
         background-color: white;
         cursor: pointer;
     }
@@ -132,7 +133,7 @@
     }
 
     #read {
-        padding-top: 8vh;
+        padding-top: 12vh;
         padding-bottom: 8vh;
         width: 100vw;
         max-width: 100%;
@@ -147,5 +148,16 @@
             width: 90vw;
             max-width: 90%;
         }
+        
+            
+        #theme{
+        	top: 80px;
+        	right: 15px;
+    	}
+
+    	#back {
+        	top: 10px;
+        	right:15px;
+    	}
     }
 </style>  
