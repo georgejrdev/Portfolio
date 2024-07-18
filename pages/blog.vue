@@ -3,6 +3,8 @@
     <main>
         <BlogPosts />
     </main>
+
+    <GlobalItensFooter />
 </template>
 
 
@@ -12,5 +14,7 @@
 
 
 <style scoped>
-
+    main{
+        padding-bottom: 10vh;
+    }
 </style>
