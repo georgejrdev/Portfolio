@@ -1,13 +1,12 @@
 <template>
-<section>
-    <input id="back" type="button" value="" @click="back">
-    <input id="theme" type="button" value="" @click="toggleMode">
+    <section>
+        <input id="back" type="button" value="" @click="back">
 
-    <div id="read" ref="mainElement">
-        <h1 ref="h1Element">{{ title }}</h1>
-        <p ref="pElement" v-html="content"></p>
-    </div>
-</section>
+        <div id="read" ref="mainElement">
+            <h1 ref="h1Element">{{ title }}</h1>
+            <p ref="pElement" v-html="content"></p>
+        </div>
+    </section>
 </template>
 
 
@@ -20,35 +19,6 @@
     const title = ref('');
     const content = ref('');
 
-    const darkMode = ref(true);
-    const mainElement = ref<HTMLElement | null>(null);
-    const h1Element = ref<HTMLElement | null>(null);
-    const pElement = ref<HTMLElement | null>(null);
-
-    const darkColors = {
-        main: '#1C1B21',
-        h1: '#CB9630',
-        p: 'white'
-    };
-
-    const lightColors = {
-        main: '#FFF',
-        h1: '#165F51',
-        p: 'black'
-    };
-
-    const applyColors = (colors: { main: string, h1: string, p: string }) => {
-        if (mainElement.value) {
-            mainElement.value.style.backgroundColor = colors.main;
-        }
-        if (h1Element.value) {
-            h1Element.value.style.color = colors.h1;
-        }
-        if (pElement.value) {
-            pElement.value.style.color = colors.p;
-        }
-    };
-
     const back = () =>{
         const currentUrl = window.location.href;
         const url = new URL(currentUrl);
@@ -56,32 +26,9 @@
         window.location.href = url.toString();    
     }
 
-    const toggleMode = () => {
-        darkMode.value = !darkMode.value;
-
-        if (darkMode.value) {
-            applyColors(darkColors);
-        } else {
-            applyColors(lightColors);
-        }
-
-        localStorage.setItem('darkMode', JSON.stringify(darkMode.value));
-    };
-
     onMounted(() => {
-        const savedMode = localStorage.getItem('darkMode');
-
-        if (savedMode) {
-            darkMode.value = JSON.parse(savedMode);
-        }
-
-        if (darkMode.value) {
-            applyColors(darkColors);
-        } else {
-            applyColors(lightColors);
-        }
-
         const post = initialPosts.find(p => p.id === id);
+        
         if (post) {
             title.value = post.title;
             content.value = post.content;
@@ -92,72 +39,76 @@
 
 <style scoped>
 
-    #theme{
-        background-image: url("~/assets/images/theme.png");
-        top: 20px;
-        right: 15px;
+    *{
+        color:black;
+        font-family: 'Inter';
+        letter-spacing: 0.35px;
     }
-
+    
     #back {
-        top: 20px;
-        right: 60px;
-        background-image: url("~/assets/images/back.png");
-    }
-
-    input {
-        position: absolute;
-        border: 2px solid black;
-        border-radius: 100%;
+        position: fixed;
+        top: 10px;
+        right: 15px;
         width: 40px;
         height: 40px;
+        border: 2px solid black;
+        border-radius: 100%;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         background-color: white;
         cursor: pointer;
+        background-image: url("~/assets/images/back.png");
     }
 
+    section {
+        width: 100vw;
+        max-width: 100%;
+        background-color: rgb(253, 253, 253);
+    }
+    
     h1 {
-        color: var(--title-emphasis);
+        font-size: xx-large;
         text-align: center;
-        font-size: 36px;
-        transition: color 0.5s;
     }
 
     p {
-        margin: auto;
+        font-weight: normal;
+    }
+
+    ::v-deep h3 {
+        font-family: 'Inter';
+        color: black;
+        letter-spacing: 0.35px;
+        text-align: left;
+        font-weight: 550;
         margin-top: 10vh;
-        font-weight: lighter;
-        width: 90%;
-        transition: color 0.5s;
+        margin-bottom: 5vh;
+    }
+
+    h4,h5,h6{
+        margin-top: 5vh;
+        margin-bottom: 5vh
     }
 
     #read {
+        padding: 10vw;
         padding-top: 12vh;
         padding-bottom: 8vh;
-        width: 100vw;
         max-width: 100%;
         height: auto;
-        background-color: rgb(28, 27, 33);
-        transition: background-color 0.5s;
+        background-color: white;
     }
 
     @media screen and (min-width:1024px) {
-        #read {
-            margin: auto;
-            width: 90vw;
-            max-width: 90%;
-        }
-        
-            
-        #theme{
-        	top: 80px;
-        	right: 15px;
-    	}
-
-    	#back {
+        #back {
         	top: 10px;
         	right:15px;
     	}
+
+        #read {
+            margin: auto;
+            max-width: 60%;
+        }           
     }
 </style>  
