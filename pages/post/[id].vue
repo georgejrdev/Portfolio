@@ -12,7 +12,12 @@
 
 
 <script setup lang="ts">
+
 import { posts as initialPosts } from "~/assets/save/posts"
+
+useHead({
+    title: "Post - George Júnior"
+})
 
 const route = useRoute()
 const id = Number(route.params.id)
