@@ -1,5 +1,5 @@
 <template>
-    <h1>os melhores <span>Artigos</span> onde eu comento e argumento sobre alguns temas</h1>
+    <h1>Eu sou George Júnior e estes são os melhores <span>Artigos</span>que eu escrevi</h1>
 </template>
 
 
@@ -32,6 +32,10 @@
             text-align: left;
             max-width: 100%;        
         }    
+
+        span {
+            margin-bottom:1vh;
+        }
     }
 
 </style>
