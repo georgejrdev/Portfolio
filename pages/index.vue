@@ -15,8 +15,8 @@
 
 
 <script lang="ts" setup>
-    import laptopImage from '~/assets/images/laptop.png'
-    import cellphoneImage from '~/assets/images/cellphone.png'
+import laptopImage from "~/assets/images/laptop.png"
+import cellphoneImage from "~/assets/images/cellphone.png"
 </script>
 
 

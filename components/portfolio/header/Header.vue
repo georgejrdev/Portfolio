@@ -16,7 +16,7 @@
 
 
 <script lang="ts" setup>
-import HeaderLangs from './minimalComponents/HeaderLangs.vue';
+import HeaderLangs from "./minimalComponents/HeaderLangs.vue"
 
 
 </script>

@@ -109,15 +109,15 @@
 </template>
 
 <script lang="ts" setup>
-    import pathImage from '~/assets/images/projects/path.png'
-    import hamburgueriaImage from '~/assets/images/projects/hamburgueria.png'
-    import marioImage from '~/assets/images/projects/mario.png'
-    import gamesOnlineImage from '~/assets/images/projects/games-online.png'
-    import organizadorPastasImage from '~/assets/images/projects/organizador-de-pastas.png'
-    import notifyHubImage from '~/assets/images/projects/notify-hub.png'
-    import cityInfoImage from '~/assets/images/projects/info-city.png'
-    import ratingSystemImage from '~/assets/images/projects/rating-system.png'
-    import audiobookGeneratorImage from '~/assets/images/projects/audiobook-generator.png'
+import pathImage from "~/assets/images/projects/path.png"
+import hamburgueriaImage from "~/assets/images/projects/hamburgueria.png"
+import marioImage from "~/assets/images/projects/mario.png"
+import gamesOnlineImage from "~/assets/images/projects/games-online.png"
+import organizadorPastasImage from "~/assets/images/projects/organizador-de-pastas.png"
+import notifyHubImage from "~/assets/images/projects/notify-hub.png"
+import cityInfoImage from "~/assets/images/projects/info-city.png"
+import ratingSystemImage from "~/assets/images/projects/rating-system.png"
+import audiobookGeneratorImage from "~/assets/images/projects/audiobook-generator.png"
 </script>
 
 <style scoped>

@@ -14,33 +14,33 @@
 
 
 <script lang="ts" setup>
-    import { onMounted, onBeforeUnmount, defineProps } from 'vue';
-    import { adjustSection } from '~/utils/changeElementsOrder';
+import { onMounted, onBeforeUnmount, defineProps } from "vue"
+import { adjustSection } from "~/utils/changeElementsOrder"
 
-    interface Props {
-        idSection: string;
-        title: string;
-        description:string;
-        urlImage:string;
-        urlDeploy:string;
-        urlGithub:string;
-        direction:string;
-    }
+interface Props {
+    idSection: string;
+    title: string;
+    description:string;
+    urlImage:string;
+    urlDeploy:string;
+    urlGithub:string;
+    direction:string;
+}
 
-    const props = defineProps<Props>();
+const props = defineProps<Props>()
 
-    function adjustProjectStructure() {
-        adjustSection(props.idSection,props.direction);
-    }
+function adjustProjectStructure() {
+    adjustSection(props.idSection,props.direction)
+}
 
-    onMounted(() => {
-        adjustProjectStructure();
-        window.addEventListener('resize', adjustProjectStructure);
-    });
+onMounted(() => {
+    adjustProjectStructure()
+    window.addEventListener("resize", adjustProjectStructure)
+})
 
-    onBeforeUnmount(() => {
-        window.removeEventListener('resize', adjustProjectStructure);
-    });
+onBeforeUnmount(() => {
+    window.removeEventListener("resize", adjustProjectStructure)
+})
 </script>
 
 

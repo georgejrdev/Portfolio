@@ -9,7 +9,7 @@
 
             <div class="group-buttons">
                 <input v-if="deployed" @click="toLink(props.urlDeploy)" class="project-buttons project-deploy" type="button" value="Deploy">
-                <input v-if="github" @click="toLink(props.urlGithub)"class="project-buttons project-github" type="button" value="Github">
+                <input v-if="github" @click="toLink(props.urlGithub)" class="project-buttons project-github" type="button" value="Github">
             </div>
         </div>
     </div>
@@ -17,68 +17,68 @@
 
 
 <script setup lang="ts">
-    import { defineProps, ref } from 'vue';
+import { defineProps, ref } from "vue"
 
-    interface Props {
-        lang:string
-        idContent: string;
-        idAbout: string;
-        deployed?: boolean;
-        github?: boolean;
-        urlDeploy?: string;
-        urlGithub?: string;
-        description: string;
-        urlImage: string;
+interface Props {
+    lang:string
+    idContent: string;
+    idAbout: string;
+    deployed?: boolean;
+    github?: boolean;
+    urlDeploy?: string;
+    urlGithub?: string;
+    description: string;
+    urlImage: string;
+}
+
+const langText = ref<HTMLElement | null>(null)
+const props = defineProps<Props>()
+const showAboutSection = ref(false)
+const showContentSection = ref(true)
+let hideTimer: ReturnType<typeof setTimeout> | null = null
+
+const showAbout = () => {
+    if (hideTimer !== null) {
+        clearTimeout(hideTimer)
     }
-
-    const langText = ref<HTMLElement | null>(null);
-    const props = defineProps<Props>();
-    const showAboutSection = ref(false);
-    const showContentSection = ref(true);
-    let hideTimer: ReturnType<typeof setTimeout> | null = null;
-
-    const showAbout = () => {
-        if (hideTimer !== null) {
-            clearTimeout(hideTimer);
-        }
-        showContentSection.value= false
-        showAboutSection.value = true
-    };
+    showContentSection.value= false
+    showAboutSection.value = true
+}
     
-    const hideAbout = () => {
-        hideTimer = setTimeout(() => {
-            showAboutSection.value = false
-            showContentSection.value= true
-        }, 20);
-    };
+const hideAbout = () => {
+    hideTimer = setTimeout(() => {
+        showAboutSection.value = false
+        showContentSection.value= true
+    }, 20)
+}
 
-    const cancelHideTimer = () => {
-        if (hideTimer !== null) {
-            clearTimeout(hideTimer);
-        }
-    };
+const cancelHideTimer = () => {
+    if (hideTimer !== null) {
+        clearTimeout(hideTimer)
+    }
+}
 
-    function toLink(link:string | undefined){
-        window.open(link,"_blank")
+function toLink(link:string | undefined){
+    window.open(link,"_blank")
+}
+
+onMounted(()=>{
+    let colors:Record<string,string> = {
+        "java":"#C96A14",
+        "python":"#153380",
+        "php":"#6E14C9",
+        "typescript":"#4e4ef7",
+        "vuejs":"#17631F",
+        "nuxtjs":"#39a344",
+        "javascript":"#c4b241",
     }
 
-    onMounted(()=>{
-        let colors:Record<string,string> = {
-            "java":"#C96A14",
-            "python":"#153380",
-            "php":"#6E14C9",
-            "typescript":"#4e4ef7",
-            "vuejs":"#17631F",
-            "nuxtjs":"#39a344",
-            "javascript":"#c4b241",
-        }
+    let color:string = colors[props.lang.trim().toLowerCase()]
 
-        let color:string = colors[props.lang.trim().toLowerCase()]
-
-        if (langText.value){
-            langText.value.style.backgroundColor = color;
-        }
-    })
+    if (langText.value){
+        langText.value.style.backgroundColor = color
+    }
+})
 </script>
 
 

@@ -17,20 +17,20 @@
 
 <script lang="ts" setup>
 
-    function redirectToGithub(){
-        window.open("https://github.com/georgejrdev", "_blank");
-    }    
+function redirectToGithub(){
+    window.open("https://github.com/georgejrdev", "_blank")
+}    
 
-    function redirectToLinkedin(){
-        window.open("https://www.linkedin.com/in/georgejrdev/", "_blank");
-    }
+function redirectToLinkedin(){
+    window.open("https://www.linkedin.com/in/georgejrdev/", "_blank")
+}
 
-    function scrollTo(id:string){
-        const element = document.getElementById(id);
-        if (element) {
-            element.scrollIntoView()
-        }
+function scrollTo(id:string){
+    const element = document.getElementById(id)
+    if (element) {
+        element.scrollIntoView()
     }
+}
 
 </script>
 

@@ -11,7 +11,7 @@
 
 
 <script setup lang="ts">
-    import { posts } from '~/assets/save/posts';
+import { posts } from "~/assets/save/posts"
 </script>
 
 

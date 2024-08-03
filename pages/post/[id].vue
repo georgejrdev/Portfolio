@@ -4,7 +4,7 @@
 
         <div id="read" ref="mainElement">
             <h1 ref="h1Element">{{ title }}</h1>
-            <p id="author">~By <a target="_blank" id="author-link"href="https://portfolio-georgejrdev.vercel.app/">George Júnior</a></p>
+            <p id="author">~By <a target="_blank" id="author-link" href="https://portfolio-georgejrdev.vercel.app/">George Júnior</a></p>
             <p ref="pElement" v-html="content"></p>
         </div>
     </section>
@@ -12,29 +12,29 @@
 
 
 <script setup lang="ts">
-    import { posts as initialPosts } from '~/assets/save/posts';
+import { posts as initialPosts } from "~/assets/save/posts"
 
-    const route = useRoute();
-    const id = Number(route.params.id);
+const route = useRoute()
+const id = Number(route.params.id)
 
-    const title = ref('');
-    const content = ref('');
+const title = ref("")
+const content = ref("")
 
-    const back = () =>{
-        const currentUrl = window.location.href;
-        const url = new URL(currentUrl);
-        url.pathname = `/blog`;
-        window.location.href = url.toString();    
-    }
+const back = () =>{
+    const currentUrl = window.location.href
+    const url = new URL(currentUrl)
+    url.pathname = "/blog"
+    window.location.href = url.toString()    
+}
 
-    onMounted(() => {
-        const post = initialPosts.find(p => p.id === id);
+onMounted(() => {
+    const post = initialPosts.find(p => p.id === id)
         
-        if (post) {
-            title.value = post.title;
-            content.value = post.content;
-        }
-    });
+    if (post) {
+        title.value = post.title
+        content.value = post.content
+    }
+})
 </script>
 
 

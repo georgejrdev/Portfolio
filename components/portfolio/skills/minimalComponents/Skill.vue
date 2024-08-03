@@ -6,12 +6,12 @@
 
 
 <script lang="ts" setup>
-    interface Props {
-        backgroundColor: string;
-        text: string;
-    }
+interface Props {
+    backgroundColor: string;
+    text: string;
+}
 
-    defineProps<Props>();
+defineProps<Props>()
 </script>
 
 
