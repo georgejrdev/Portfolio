@@ -4,6 +4,7 @@
 
         <div id="read" ref="mainElement">
             <h1 ref="h1Element">{{ title }}</h1>
+            <p id="author">~By <a target="_blank" id="author-link"href="https://portfolio-georgejrdev.vercel.app/">George Júnior</a></p>
             <p ref="pElement" v-html="content"></p>
         </div>
     </section>
@@ -74,6 +75,13 @@
 
     p {
         font-weight: normal;
+    }
+
+    #author,#author-link {
+        font-size: small;
+        font-weight: 400;
+        text-align: center;
+        color: rgb(80, 80, 80);
     }
 
     ::v-deep h3 {
