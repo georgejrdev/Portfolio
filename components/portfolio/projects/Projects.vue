@@ -60,12 +60,12 @@
             />
 
             <PortfolioProjectsMinimalComponentsProject
-                :idContent="'project-notify-hub'"
-                :idAbout="'about-notify-hub'"
-                :description="'Ferramenta para organizar arquivos, facilitando a busca e a classificação dos arquivos.'"
-                :urlImage="notifyHubImage"
+                :idContent="'project-lib-utils'"
+                :idAbout="'about-lib-utils'"
+                :description="'Utilitários compactados numa biblioteca para auxiliar no desenvolvimento de projetos.'"
+                :urlImage="libUtilsImage"
                 :github="true"
-                :urlGithub="'https://github.com/georgejrdev/Notify-Hub'"
+                :urlGithub="'https://github.com/georgejrdev/Lib-Utils'"
                 :lang="'Java'"
             />
 
@@ -104,6 +104,16 @@
                 :urlDeploy="'https://audiobook-generator-chi.vercel.app/'"
                 :lang="'Python'"
             />
+
+            <PortfolioProjectsMinimalComponentsProject
+                :idContent="'project-toolkit'"
+                :idAbout="'about-toolkit'"
+                :description="'Um CLI para auxiliar no desenvolvimento de projetos. Crie ToDos, traduza e converse com I.A. direto do terminal.'"
+                :urlImage="toolkitImage"
+                :github="true"
+                :urlGithub="'https://github.com/georgejrdev/ToolKit-Development'"
+                :lang="'Java'"
+            />
         </div>
     </section>
 </template>
@@ -114,10 +124,11 @@ import hamburgueriaImage from "~/assets/images/projects/hamburgueria.png"
 import marioImage from "~/assets/images/projects/mario.png"
 import gamesOnlineImage from "~/assets/images/projects/games-online.png"
 import organizadorPastasImage from "~/assets/images/projects/organizador-de-pastas.png"
-import notifyHubImage from "~/assets/images/projects/notify-hub.png"
+import libUtilsImage from "~/assets/images/projects/lib-utils.png"
 import cityInfoImage from "~/assets/images/projects/info-city.png"
 import ratingSystemImage from "~/assets/images/projects/rating-system.png"
 import audiobookGeneratorImage from "~/assets/images/projects/audiobook-generator.png"
+import toolkitImage from "~/assets/images/projects/toolkit.png"
 </script>
 
 <style scoped>
