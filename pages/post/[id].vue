@@ -45,7 +45,7 @@ onMounted(() => {
 
 <style scoped>
 
-    *{
+    *,::v-deep span{
         color:black;
         font-family: 'Inter';
         letter-spacing: 0.35px;
@@ -102,6 +102,10 @@ onMounted(() => {
     h4,h5,h6{
         margin-top: 5vh;
         margin-bottom: 5vh
+    }
+
+    ::v-deep span{
+        font-weight: normal;
     }
 
     #read {
