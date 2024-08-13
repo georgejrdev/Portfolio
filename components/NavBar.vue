@@ -3,19 +3,35 @@
     <div id="placeholder"></div>
 
     <nav>
-        <div id="articles">
-            <a href="/">ver portfólio</a>
+        <div id="page">
+            <a :href="pageLink">{{ pageName }}</a>
         </div>
 
-        <div id="links">
-            <div @click="redirectToGithub()" id="github" class="link"></div>
-            <div @click="redirectToLinkedin()" id="linkedin" class="link"></div>
+        <div id="buttons">
+            <div v-if="props.navigate" id="navigate">
+                <p @click="scrollTo('desktop-project')">projetos</p>
+                <p @click="scrollTo('about-me')" >sobre mim</p>
+                <p @click="scrollTo('contact')" >contato</p>
+            </div>
+
+            <div id="links">
+                <div @click="redirectToGithub()" id="github" class="link"></div>
+                <div @click="redirectToLinkedin()" id="linkedin" class="link"></div>
+            </div>
         </div>
     </nav>
 </template>
 
 
 <script lang="ts" setup>
+
+interface Props {
+    pageName:string
+    pageLink:string
+    navigate:boolean
+}
+
+const props = defineProps<Props>()
 
 function redirectToGithub(){
     window.open("https://github.com/georgejrdev", "_blank")
@@ -55,15 +71,21 @@ function scrollTo(id:string){
         background-color:var(--navbar);
     }
 
-    #articles{
+    #page{
         margin-left: 15px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    #links{
+    #buttons{
         margin-right:15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #links{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -80,7 +102,13 @@ function scrollTo(id:string){
         background-repeat: no-repeat;
     }   
 
-    a{
+    #navigate{
+        display: none;
+        margin-right: 15px;
+        gap: 20px;
+    }
+
+    a,p{
         text-decoration: none;
         cursor:pointer;
     }
@@ -106,5 +134,11 @@ function scrollTo(id:string){
 
     #linkedin{
         background-image: url("~/assets/images/linkedin.png");
+    }
+
+    @media screen and (min-width: 1024px) {
+        #navigate{
+            display: flex;
+        }
     }
 </style>

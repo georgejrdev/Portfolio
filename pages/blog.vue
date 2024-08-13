@@ -4,7 +4,7 @@
         <BlogPosts />
     </main>
 
-    <GlobalItensFooter />
+    <Footer />
 </template>
 
 

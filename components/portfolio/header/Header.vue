@@ -1,7 +1,10 @@
 <template>
     <header>
 
-        <PortfolioHeaderMinimalComponentsNavbar />
+        <NavBar 
+            :pageLink="'/blog'"
+            :pageName="'ver artigos'"
+            :navigate="true"/>
 
         <div id="content">
             <div id="presentation">

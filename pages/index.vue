@@ -31,7 +31,7 @@
         <PortfolioContact />
     </main>
 
-    <GlobalItensFooter />
+    <Footer />
 </template>
 
 

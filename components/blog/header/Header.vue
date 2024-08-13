@@ -1,6 +1,10 @@
 <template>
     <header>
-        <BlogHeaderMinimalComponentsNavbar />
+        <NavBar
+            :pageLink="'/'"
+            :pageName="'ver portfolio'"
+            :navigate="false"
+        />
 
         <div id="content">
             <BlogHeaderMinimalComponentsHeaderTitle /> 
