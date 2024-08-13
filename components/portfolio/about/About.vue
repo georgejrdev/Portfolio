@@ -1,11 +1,11 @@
 <template>
     <section id="about-me">
         <div id="about-me-content">
-            <h2>Sobre mim</h2>
-            <p id="description">Sou um programador fullstack com quase 4 anos de experiência, apaixonado por aprender e evoluir constantemente. Adoro desafios de gestão e liderança, unindo minha paixão pela tecnologia à habilidade de inspirar e coordenar equipes.</p>
-            <h3>Formação</h3>
-            <p class="school">Superior em Análise e Desenvolvimento de Sistemas</p>
-            <p class="school">Técnico em Desenvolvimento de Sistemas</p>
+            <h2>{{ $t("portfolio.aboutMe.title") }}</h2>
+            <p id="description">{{ $t("portfolio.aboutMe.description") }}</p>
+            <h3>{{ $t("portfolio.aboutMe.education") }}</h3>
+            <p class="school">{{ $t("portfolio.aboutMe.educations.schoolOne") }}</p>
+            <p class="school">{{ $t("portfolio.aboutMe.educations.schoolTwo") }}</p>
         </div>
 
         <div id="decoration"></div>

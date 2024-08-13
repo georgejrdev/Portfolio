@@ -9,14 +9,22 @@
 
         <div id="buttons">
             <div v-if="props.navigate" id="navigate">
-                <p @click="scrollTo('desktop-project')">projetos</p>
-                <p @click="scrollTo('about-me')" >sobre mim</p>
-                <p @click="scrollTo('contact')" >contato</p>
+                <p @click="scrollTo('desktop-project')">{{ $t('nav.projects') }}</p>
+                <p @click="scrollTo('about-me')" >{{ $t('nav.about') }}</p>
+                <p @click="scrollTo('contact')" >{{ $t('nav.contact') }}</p>
             </div>
 
             <div id="links">
-                <div @click="redirectToGithub()" id="github" class="link"></div>
-                <div @click="redirectToLinkedin()" id="linkedin" class="link"></div>
+                <div id="links-container" v-if="showLinks">
+                    <div @click="redirectToGithub()" id="github" class="link"></div>
+                    <div @click="redirectToLinkedin()" id="linkedin" class="link"></div>
+                </div>
+
+                <div id="language-container" v-if="showLang">
+                    <div @click="setLanguage('pt')" id="pt" class="link"></div>
+                    <div @click="setLanguage('en')" id="en" class="link"></div>
+                </div>
+                <div @click="showSelectLanguage()" id="language" class="link"> </div>
             </div>
         </div>
     </nav>
@@ -46,6 +54,22 @@ function scrollTo(id:string){
     if (element) {
         element.scrollIntoView()
     }
+}
+
+const { locale, setLocale } = useI18n()
+
+let showLang = ref(false)
+let showLinks = ref(true)
+
+function showSelectLanguage(){
+    showLang.value = !showLang.value
+    showLinks.value = !showLinks.value
+}
+
+function setLanguage(language:string){
+    setLocale(language)
+    localStorage.setItem("language", language)
+    showSelectLanguage()
 }
 
 </script>
@@ -85,7 +109,7 @@ function scrollTo(id:string){
         align-items: center;
     }
 
-    #links{
+    #links, #links-container, #language-container{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -134,6 +158,22 @@ function scrollTo(id:string){
 
     #linkedin{
         background-image: url("~/assets/images/linkedin.png");
+    }
+
+    #language{
+        background-size: 60%;
+        background-color: rgb(0, 0, 0);
+        background-image: url("~/assets/images/language.png");
+    }
+
+    #pt{
+        background-size: 60%;
+        background-image: url("~/assets/images/pt.png");
+    }
+    
+    #en{
+        background-size: 60%;
+        background-image: url("~/assets/images/en.png");
     }
 
     @media screen and (min-width: 1024px) {

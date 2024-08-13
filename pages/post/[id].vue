@@ -1,6 +1,8 @@
 <template>
     <section>
-        <input id="back" type="button" value="" @click="back">
+        <input class="button" id="back" type="button" value="" @click="back">
+        <input class="button" id="pt" type="button" value="" @click="changeLanguage('pt')">
+        <input class="button" id="en" type="button" value="" @click="changeLanguage('en')">
 
         <div id="read" ref="mainElement">
             <h1 ref="h1Element">{{ title }}</h1>
@@ -13,7 +15,10 @@
 
 <script setup lang="ts">
 
-import { posts as initialPosts } from "~/assets/save/posts"
+import type { AllPosts, Post } from "~/assets/save/posts"
+import { allPosts as initialPosts } from "~/assets/save/posts"
+
+const defaultLanguage: keyof AllPosts = "pt"
 
 useHead({
     title: "Post - George Júnior"
@@ -22,18 +27,32 @@ useHead({
 const route = useRoute()
 const id = Number(route.params.id)
 
-const title = ref("")
-const content = ref("")
+const language = ref<keyof AllPosts>(defaultLanguage)
+const title = ref<string>("")
+const content = ref<string>("")
 
-const back = () =>{
+const back = () => {
     const currentUrl = window.location.href
     const url = new URL(currentUrl)
     url.pathname = "/blog"
     window.location.href = url.toString()    
 }
 
+const { locale, setLocale } = useI18n()
+
+const changeLanguage = (language:string)=>{
+    setLocale(language)
+    localStorage.setItem("language", language)
+    window.location.reload()
+}
+
 onMounted(() => {
-    const post = initialPosts.find(p => p.id === id)
+    if (typeof window !== "undefined") {
+        const storedLanguage = localStorage.getItem("language") as keyof AllPosts | null
+        language.value = storedLanguage ?? defaultLanguage
+    }
+
+    const post = initialPosts[language.value].find((p: Post) => p.id === id)
         
     if (post) {
         title.value = post.title
@@ -41,6 +60,7 @@ onMounted(() => {
     }
 })
 </script>
+
 
 
 <style scoped>
@@ -51,10 +71,8 @@ onMounted(() => {
         letter-spacing: 0.35px;
     }
     
-    #back {
+    .button {
         position: fixed;
-        top: 10px;
-        right: 15px;
         width: 40px;
         height: 40px;
         border: 2px solid black;
@@ -62,15 +80,35 @@ onMounted(() => {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        background-color: white;
+        background-color: black;
         cursor: pointer;
+    }
+    
+    #back {
+        top: 10px;
+        right: 15px;
         background-image: url("~/assets/images/back.png");
+    }
+
+    #pt{
+        top: 60px;
+        right: 15px;
+        background-image: url("~/assets/images/pt.png");
+        background-size: 60%;
+    }
+
+    #en{
+        top: 110px;
+        right: 15px;
+        background-image: url("~/assets/images/en.png");
+        background-size: 60%;
     }
 
     section {
         width: 100vw;
         max-width: 100%;
         background-color: rgb(253, 253, 253);
+        min-height: 100vh;
     }
     
     h1 {
@@ -118,11 +156,6 @@ onMounted(() => {
     }
 
     @media screen and (min-width:1024px) {
-        #back {
-        	top: 10px;
-        	right:15px;
-    	}
-
         #read {
             margin: auto;
             max-width: 60%;

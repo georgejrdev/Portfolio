@@ -1,6 +1,6 @@
 <template>
     <section>
-        <h2>Habilidades</h2>
+        <h2>{{ $t("portfolio.skills") }}</h2>
 
         <div id="skills-content">
             <PortfolioSkillsMinimalComponentsSkill text="JAVA" backgroundColor="#945DFF" />
@@ -14,18 +14,19 @@
             <PortfolioSkillsMinimalComponentsSkill text="DOCKER" backgroundColor="#FFA451" />
             <PortfolioSkillsMinimalComponentsSkill text="AWS" backgroundColor="#9B76E2" />
             <PortfolioSkillsMinimalComponentsSkill text="AZURE" backgroundColor="#249782" />
-            <PortfolioSkillsMinimalComponentsSkill text="GESTÃO" backgroundColor="#4D8EB2" />
-            <PortfolioSkillsMinimalComponentsSkill text="EQUIPE" backgroundColor="#FF7397" />
+            <PortfolioSkillsMinimalComponentsSkill :text="$t('portfolio.management.manager')" backgroundColor="#4D8EB2" />
+            <PortfolioSkillsMinimalComponentsSkill :text="$t('portfolio.management.team')" backgroundColor="#FF7397" />
             <PortfolioSkillsMinimalComponentsSkill text="PYTHON" backgroundColor="#6D81A8" />
             <PortfolioSkillsMinimalComponentsSkill text="FLASK" backgroundColor="#FF9F3D" />
             <PortfolioSkillsMinimalComponentsSkill text="PHP" backgroundColor="#5CB15D" />
             <PortfolioSkillsMinimalComponentsSkill text="LARAVEL" backgroundColor="#639FFF" />
-            <PortfolioSkillsMinimalComponentsSkill text="AGILE" backgroundColor="#AA5555" />
+            <PortfolioSkillsMinimalComponentsSkill :text="$t('portfolio.management.agile')" backgroundColor="#AA5555" />
             <PortfolioSkillsMinimalComponentsSkill text="MYSQL" backgroundColor="#FFB4FF" />
             <PortfolioSkillsMinimalComponentsSkill text="POSTGRE" backgroundColor="#BF8F8F" />
             <PortfolioSkillsMinimalComponentsSkill text="DESIGN" backgroundColor="#FFB97E" />
             <PortfolioSkillsMinimalComponentsSkill text="SCRUM" backgroundColor="#AB8ED6" />
-            <PortfolioSkillsMinimalComponentsSkill text="LIDER" backgroundColor="#36BFA1" />
+            <PortfolioSkillsMinimalComponentsSkill :text="$t('portfolio.management.leader')" backgroundColor="#36BFA1" />
+            <PortfolioSkillsMinimalComponentsSkill text="TDD" backgroundColor="#4DB8D0" />
             <PortfolioSkillsMinimalComponentsSkill text="REST" backgroundColor="#6EA2C8" />
             <PortfolioSkillsMinimalComponentsSkill text="RPC" backgroundColor="#945DFF" />
             <PortfolioSkillsMinimalComponentsSkill text="GRAPHQL" backgroundColor="#4E7896" />

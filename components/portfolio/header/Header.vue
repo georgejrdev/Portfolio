@@ -3,14 +3,14 @@
 
         <NavBar 
             :pageLink="'/blog'"
-            :pageName="'ver artigos'"
+            :pageName="$t('nav.seeArticles')"
             :navigate="true"/>
 
         <div id="content">
             <div id="presentation">
                 
                 <MainTitle 
-                :beforeEmphasis="'meu nome é George Júnior,'"
+                :beforeEmphasis="$t('portfolio.title.before')"
                 :emphasis="'FullStack'"
                 :afterEmphasis="'developer'"
                 :marginBottom="'0'"
@@ -26,8 +26,6 @@
 
 
 <script lang="ts" setup>
-import HeaderLangs from "./minimalComponents/HeaderLangs.vue"
-
 
 </script>
 

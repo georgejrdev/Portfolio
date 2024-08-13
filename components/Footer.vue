@@ -1,7 +1,7 @@
 <template>
     <footer>
-        <p id="framework">feito com <span>Nuxt Js</span></p>
-        <p id="rights">© 2024 - George Júnior. Todos os direitos reservados.</p>
+        <p id="framework">{{ $t("footer.message") }}<span> Nuxt Js</span></p>
+        <p id="rights">© 2024 - George Júnior. {{ $t("footer.rights") }}.</p>
     </footer>
 </template>
 

@@ -11,7 +11,27 @@
 
 
 <script setup lang="ts">
-import { posts } from "~/assets/save/posts"
+import type { Post, AllPosts } from "~/assets/save/posts"
+import { allPosts } from "~/assets/save/posts"
+
+const defaultLanguage: keyof AllPosts = "pt"
+
+const posts = ref<Post[]>([])
+const language = ref<keyof AllPosts>(defaultLanguage)
+
+const initialize = () => {
+    if (typeof window !== "undefined") {
+        const storedLanguage = localStorage.getItem("language") as keyof AllPosts | null
+        language.value = storedLanguage ?? defaultLanguage
+        localStorage.setItem("language", language.value)
+    }
+    
+    posts.value = allPosts[language.value] || []
+}
+
+onMounted(() => {
+    initialize()
+})
 </script>
 
 

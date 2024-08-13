@@ -1,7 +1,7 @@
 <template>
     <section id="contact">
-        <h2>Contato</h2>
-        <h3>Vamos trabalhar juntos?</h3>
+        <h2>{{ $t('portfolio.contact.title') }}</h2>
+        <h3>{{ $t('portfolio.contact.message') }}</h3>
         <p>ctt.georgejr@gmail.com</p>
     </section>
 </template>

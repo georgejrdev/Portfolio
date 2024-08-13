@@ -1,12 +1,12 @@
 <template>
     <section id="projects">
-        <h2>passe o mouse nos projetos</h2>
+        <h2>{{ $t("portfolio.otherProjects.mouseHover") }}</h2>
 
         <div id="project-container">
             <PortfolioProjectsMinimalComponentsProject
                 :idContent="'project-path'"
                 :idAbout="'about-path'"
-                :description="'Um site feito para guiar iniciantes na área de TI, mostrando um caminho à seguir com material de referência.'"
+                :description="$t('portfolio.otherProjects.descriptions.path')"
                 :urlImage="pathImage"
                 :github="true"
                 :urlGithub="'https://github.com/georgejrdev/Path'"
@@ -18,7 +18,7 @@
             <PortfolioProjectsMinimalComponentsProject
                 :idContent="'project-hamburgueria'"
                 :idAbout="'about-hamburgueria'"
-                :description="'Criação de um site moderno para uma hamburgueria, destacando o menu, a história e as informações de contato.'"
+                :description="$t('portfolio.otherProjects.descriptions.burger')"
                 :urlImage="hamburgueriaImage"
                 :github="true"
                 :urlGithub="'https://github.com/georgejrdev/Hamburgueria'"
@@ -30,7 +30,7 @@
             <PortfolioProjectsMinimalComponentsProject
                 :idContent="'project-mario'"
                 :idAbout="'about-mario'"
-                :description="'Uma nova forma de jogar Super Mario: utilize movimentos reais usando uma câmera para jogar.'"
+                :description="$t('portfolio.otherProjects.descriptions.mario')"
                 :urlImage="marioImage"
                 :github="true"
                 :urlGithub="'https://github.com/georgejrdev/Mario-Mocap-Control'"
@@ -40,7 +40,7 @@
             <PortfolioProjectsMinimalComponentsProject
                 :idContent="'project-games-online'"
                 :idAbout="'about-games-online'"
-                :description="'Um site que agrega jogos de navegador, com sistema de pontuação individual para cada jogo.'"
+                :description="$t('portfolio.otherProjects.descriptions.gamesOnline')"
                 :urlImage="gamesOnlineImage"
                 :github="true"
                 :urlGithub="'https://github.com/georgejrdev/Games-Online'"
@@ -52,7 +52,7 @@
             <PortfolioProjectsMinimalComponentsProject
                 :idContent="'project-organizador-pastas'"
                 :idAbout="'about-organizador-pastas'"
-                :description="'Ferramenta para organizar arquivos, facilitando a busca e a classificação dos arquivos.'"
+                :description="$t('portfolio.otherProjects.descriptions.folders')"
                 :urlImage="organizadorPastasImage"
                 :github="true"
                 :urlGithub="'https://github.com/georgejrdev/Automatic-Folder-Organizer'"
@@ -62,7 +62,7 @@
             <PortfolioProjectsMinimalComponentsProject
                 :idContent="'project-lib-utils'"
                 :idAbout="'about-lib-utils'"
-                :description="'Utilitários compactados numa biblioteca para auxiliar no desenvolvimento de projetos.'"
+                :description="$t('portfolio.otherProjects.descriptions.libUtils')"
                 :urlImage="libUtilsImage"
                 :github="true"
                 :urlGithub="'https://github.com/georgejrdev/Lib-Utils'"
@@ -72,7 +72,7 @@
             <PortfolioProjectsMinimalComponentsProject
                 :idContent="'project-city-info'"
                 :idAbout="'about-city-info'"
-                :description="'API que fornece um agregado de informações climáticas e notícias de uma cidade.'"
+                :description="$t('portfolio.otherProjects.descriptions.infoCity')"
                 :urlImage="cityInfoImage"
                 :github="true"
                 :urlGithub="'https://github.com/georgejrdev/City-Info-API'"
@@ -84,7 +84,7 @@
             <PortfolioProjectsMinimalComponentsProject
                 :idContent="'project-rating-system'"
                 :idAbout="'about-rating-system'"
-                :description="'Um gerenciador de avaliações. Crie e organize questões por setores para seus funcionários.'"
+                :description="$t('portfolio.otherProjects.descriptions.ratingSystem')"
                 :urlImage="ratingSystemImage"
                 :github="true"
                 :urlGithub="'https://github.com/georgejrdev/Rating-System'"
@@ -96,7 +96,7 @@
             <PortfolioProjectsMinimalComponentsProject
                 :idContent="'project-audiobook-generator'"
                 :idAbout="'about-audiobook-generator'"
-                :description="'Gere áudio através de um PDF de forma simples e eficiente utilizando bibliotecas de Python.'"
+                :description="$t('portfolio.otherProjects.descriptions.audiobook')"
                 :urlImage="audiobookGeneratorImage"
                 :github="true"
                 :urlGithub="'https://github.com/georgejrdev/AudioBook-Generator'"
@@ -108,7 +108,7 @@
             <PortfolioProjectsMinimalComponentsProject
                 :idContent="'project-toolkit'"
                 :idAbout="'about-toolkit'"
-                :description="'Um CLI para auxiliar no desenvolvimento de projetos. Crie ToDos, traduza e converse com I.A. direto do terminal.'"
+                :description="$t('portfolio.otherProjects.descriptions.toolKit')"
                 :urlImage="toolkitImage"
                 :github="true"
                 :urlGithub="'https://github.com/georgejrdev/ToolKit-Development'"

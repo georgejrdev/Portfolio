@@ -2,16 +2,16 @@
     <header>
         <NavBar
             :pageLink="'/'"
-            :pageName="'ver portfolio'"
+            :pageName="$t('nav.seePortfolio')"
             :navigate="false"
         />
 
         <div id="content">
             
             <MainTitle 
-                :beforeEmphasis="'Eu sou George Júnior e estes são os melhores'"
-                :emphasis="'Artigos'"
-                :afterEmphasis="'que eu escrevi'"
+                :beforeEmphasis="$t('blog.title.before')"
+                :emphasis="$t('blog.title.emphasis')"
+                :afterEmphasis="$t('blog.title.after')"
                 :marginBottom="'1vh'"
             />
         </div>
