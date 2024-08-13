@@ -7,7 +7,13 @@
         />
 
         <div id="content">
-            <BlogHeaderMinimalComponentsHeaderTitle /> 
+            
+            <MainTitle 
+                :beforeEmphasis="'Eu sou George Júnior e estes são os melhores'"
+                :emphasis="'Artigos'"
+                :afterEmphasis="'que eu escrevi'"
+                :marginBottom="'1vh'"
+            />
         </div>
     </header>
 </template>

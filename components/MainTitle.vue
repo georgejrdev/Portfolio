@@ -1,10 +1,17 @@
 <template>
-    <h1>meu nome é George Júnior, <span>FullStack</span>developer</h1>
+    <h1>{{ props.beforeEmphasis }}<span :style="{marginBottom:props.marginBottom}">{{ props.emphasis }}</span>{{ props.afterEmphasis }}</h1>
 </template>
 
 
-<script lang="ts" setup>
+<script setup lang="ts">
+interface Props{
+    beforeEmphasis:string
+    emphasis:string
+    afterEmphasis:string
+    marginBottom:string
+}
 
+const props = defineProps<Props>()
 </script>
 
 

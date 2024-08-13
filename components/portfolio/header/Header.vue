@@ -8,7 +8,14 @@
 
         <div id="content">
             <div id="presentation">
-                <PortfolioHeaderMinimalComponentsHeaderTitle />
+                
+                <MainTitle 
+                :beforeEmphasis="'meu nome é George Júnior,'"
+                :emphasis="'FullStack'"
+                :afterEmphasis="'developer'"
+                :marginBottom="'0'"
+                />                
+
                 <PortfolioHeaderMinimalComponentsHeaderLangs />
             </div>
             <PortfolioHeaderMinimalComponentsHeaderDecoration />
