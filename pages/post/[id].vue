@@ -84,6 +84,17 @@ onMounted(() => {
         cursor: pointer;
     }
     
+    ::v-deep .article-code{
+        display:block;
+        background-color: var(--code-background);
+        color: white;
+        font-family: "JetBrains Mono", monospace;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 30px;
+    }
+
     #back {
         top: 10px;
         right: 15px;

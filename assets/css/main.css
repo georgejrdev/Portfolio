@@ -37,10 +37,12 @@
 
     --post:#2b2932;
     --info:#201e27;
-    --p-info:#000;
+    --p-info:#000000;
 
     --footer:#1C1B21;
 
+    --code-background: #201e27;
+    --code-text: #FFFFFF;
 }
 
 
