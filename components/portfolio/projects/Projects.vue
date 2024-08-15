@@ -114,6 +114,18 @@
                 :urlGithub="'https://github.com/georgejrdev/ToolKit-Development'"
                 :lang="'Java'"
             />
+
+            <PortfolioProjectsMinimalComponentsProject
+                :idContent="'project-link-tree'"
+                :idAbout="'about-link-tree'"
+                :description="$t('portfolio.otherProjects.descriptions.linkTree')"
+                :urlImage="linkTreeImage"
+                :github="true"
+                :urlGithub="'https://github.com/georgejrdev/Link-Tree'"
+                :deployed="true"
+                :urlDeploy="'https://georgejrdev.github.io/Link-Tree'"
+                :lang="'JavaScript'"
+            />
         </div>
     </section>
 </template>
@@ -129,6 +141,7 @@ import cityInfoImage from "~/assets/images/projects/info-city.png"
 import ratingSystemImage from "~/assets/images/projects/rating-system.png"
 import audiobookGeneratorImage from "~/assets/images/projects/audiobook-generator.png"
 import toolkitImage from "~/assets/images/projects/toolkit.png"
+import linkTreeImage from "~/assets/images/projects/link-tree.png"
 </script>
 
 <style scoped>
