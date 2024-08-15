@@ -1,12 +1,14 @@
 export function adjustSection(sectionId:string,direction:string) {
     const projectContainer = document.getElementById(sectionId)
+    
     if (!projectContainer) return
 
     const imageProject = projectContainer.querySelector(".image-project")
     const projectButtons = projectContainer.querySelector(".project-buttons")
-    let projectContent = projectContainer.querySelector(".project-content") as HTMLElement | null
     const heading = projectContainer.querySelector("h2")
     const description = projectContainer.querySelector("p")
+    
+    let projectContent = projectContainer.querySelector(".project-content") as HTMLElement | null
 
     if (!imageProject || !projectButtons || !heading || !description) return
 

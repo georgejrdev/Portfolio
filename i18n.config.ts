@@ -20,7 +20,7 @@ export default defineI18nConfig(() => ({
                 },
                 skills: "Skills",
                 management: {
-                    manager: "MANAGEMENT",
+                    manager: "MANAGER",
                     team: "TEAM",
                     agile: "AGILE",
                     leader: "LEADER",
@@ -42,6 +42,7 @@ export default defineI18nConfig(() => ({
                         ratingSystem: "A ratings manager. Create and organize questions by department for your employees.",
                         audiobook: "Generate audio from a PDF easily and efficiently using Python libraries.",
                         toolKit: "A CLI to assist in project development. Create ToDos, translate, and chat with AI directly from the terminal.",
+                        linkTree:"A personal link-tree made for practicing sass."
                     },
                 },
                 aboutMe: {
@@ -109,6 +110,7 @@ export default defineI18nConfig(() => ({
                         ratingSystem: "Um gerenciador de avaliações. Crie e organize questões por setores para seus funcionários.",
                         audiobook: "Gere áudio através de um PDF de forma simples e eficiente utilizando bibliotecas de Python.",
                         toolKit: "Um CLI para auxiliar no desenvolvimento de projetos. Crie ToDos, traduza e converse com I.A. direto do terminal.",
+                        linkTree:"Um link-tree pessoal feito para praticar o sass."
                     },
                 },
                 aboutMe: {
