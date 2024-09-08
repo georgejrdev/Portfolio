@@ -2,8 +2,9 @@
 
     <PortfolioHeader />
     
+    <PortfolioSkills />
+    
     <main>
-        <PortfolioSkills />
 
         <PortfolioBestProject
             :idSection="'desktop-project'"
@@ -35,12 +36,12 @@
             :direction="'row-reverse'"
         />
         
-        <PortfolioProjects />
-        
-        <PortfolioAbout />
-        
-        <PortfolioContact />
+        <PortfolioProjects />    
     </main>
+    
+    <PortfolioAbout />
+
+    <PortfolioContact />
 
     <Footer />
 

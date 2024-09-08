@@ -51,7 +51,7 @@
 <style scoped>
 
     section {
-        padding-top: 5vh;
+        padding-top: 10vh;
         height: 95vh;
     }
 
@@ -90,6 +90,7 @@
             display: flex;
             justify-content: space-evenly;
             align-items: center;
+            padding-top: 5vh;
         }
 
         h2 {
