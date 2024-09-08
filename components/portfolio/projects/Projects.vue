@@ -108,16 +108,6 @@
             />
 
             <PortfolioProjectsMinimalComponentsProject
-                :idContent="'project-toolkit'"
-                :idAbout="'about-toolkit'"
-                :description="$t('portfolio.otherProjects.descriptions.toolKit')"
-                :urlImage="toolkitImage"
-                :github="true"
-                :urlGithub="'https://github.com/georgejrdev/ToolKit-Development'"
-                :lang="'Java'"
-            />
-
-            <PortfolioProjectsMinimalComponentsProject
                 :idContent="'project-link-tree'"
                 :idAbout="'about-link-tree'"
                 :description="$t('portfolio.otherProjects.descriptions.linkTree')"
@@ -146,7 +136,6 @@
     import cityInfoImage from "~/assets/images/projects/info-city.png"
     import ratingSystemImage from "~/assets/images/projects/rating-system.png"
     import audiobookGeneratorImage from "~/assets/images/projects/audiobook-generator.png"
-    import toolkitImage from "~/assets/images/projects/toolkit.png"
     import linkTreeImage from "~/assets/images/projects/link-tree.png"
 
 </script>

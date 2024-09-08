@@ -19,15 +19,27 @@ export default defineI18nConfig(() => ({
                     before: "my name is George Júnior,",
                 },
                 skills: "Skills",
-                management: {
-                    manager: "MANAGER",
-                    team: "TEAM",
-                    agile: "AGILE",
-                    leader: "LEADER",
+
+                softSkills: {
+                    leadership: "Liderança",
+                    teamWork: "Team Work",
+                    selfKnowLedge: "Self-Knowledge",
+                    communicative: "Communicative",
+
+                    agile: "Agile",
+                    adaptability: "Adaptability",
+                    problemSolving: "Problem Solving",
+                    timeManagement: "Time Management",
+
+                    constantStudy: "Constant Study",
+                    creativity: "Creativity",
+                    criticalThinking: "Critical Thinking",
                 },
+
                 bestProject: {
-                    desktopDescription: "Manage and control your Feature Flags with ease and efficiency. Our solution allows for the creation, updating, and real-time monitoring of all features in your project. Simplify the activation and deactivation of resources, enabling continuous and safe deployment. Optimize the end-user experience by reducing risks and increasing development agility.",
-                    mobileDescription: "Post Its is the perfect app for quickly capturing ideas and reminders. With an intuitive interface, it allows you to easily create, organize, and customize notes. Use colors, add alarms, and sync across devices. Perfect for daily tasks, ideas, and reminders.",
+                    featureControl: "Manage and control your Feature Flags with ease and efficiency. Our solution allows for the creation, updating, and real-time monitoring of all features in your project. Simplify the activation and deactivation of resources, enabling continuous and safe deployment. Optimize the end-user experience by reducing risks and increasing development agility.",
+                    postIts: "Post Its is the perfect app for quickly capturing ideas and reminders. With an intuitive interface, it allows you to easily create, organize, and customize notes. Use colors, add alarms, and sync across devices. Perfect for daily tasks, ideas, and reminders.",
+                    superToolKit: "Super ToolKit is your ultimate command-line companion, designed to bring efficiency and versatility to your terminal. This powerful CLI tool offers a range of functionalities, including translation, task management with a to-do list, and seamless Markdown-to-HTML parsing with hot reload capabilities. Whether you're managing your daily tasks or transforming documents, Super ToolKit optimizes your workflow with speed and simplicity."
                 },
                 otherProjects: {
                     mouseHover: "hover over the projects",
@@ -86,16 +98,27 @@ export default defineI18nConfig(() => ({
                     before: "meu nome é George Júnior,",
                 },
                 skills: "Habilidades",
-                management: {
-                    manager: "GESTÃO",
-                    team: "EQUIPE",
-                    agile: "AGIL",
-                    leader: "LIDER",
+
+                softSkills: {
+                    leadership: "Liderança",
+                    teamWork: "Trabalho em Equipe",
+                    selfKnowLedge: "Autoconhecimento",
+                    communicative: "Comunicativo",
+
+                    agile: "Agile",
+                    adaptability: "Adaptabilidade",
+                    problemSolving: "Resolução de Problemas",
+                    timeManagement: "Gestão de Tempo",
+
+                    constantStudy: "Estudo Constante",
+                    creativity: "Criatividade",
+                    criticalThinking: "Pensamento Critico",
                 },
 
                 bestProject: {
-                    desktopDescription: "Gerencie e controle suas Features Flags com facilidade e eficiência. Nossa solução permite a criação, atualização e monitoramento em tempo real de todas as funcionalidades do seu projeto. Simplifique a ativação e desativação de recursos, permitindo uma implementação contínua e segura. Otimize a experiência do usuário final, reduzindo riscos e aumentando a agilidade no desenvolvimento.",
-                    mobileDescription: "O Post Its é o app ideal para capturar ideias e lembretes rapidamente. Com interface intuitiva, permite criar, organizar e personalizar notas facilmente. Use cores, adicione alarmes e sincronize entre dispositivos. Perfeito para tarefas, ideias e lembretes diários.",
+                    featureControl: "Gerencie e controle suas Features Flags com facilidade e eficiência. Nossa solução permite a criação, atualização e monitoramento em tempo real de todas as funcionalidades do seu projeto. Simplifique a ativação e desativação de recursos, permitindo uma implementação contínua e segura. Otimize a experiência do usuário final, reduzindo riscos e aumentando a agilidade no desenvolvimento.",
+                    postIts: "O Post Its é o app ideal para capturar ideias e lembretes rapidamente. Com interface intuitiva, permite criar, organizar e personalizar notas facilmente. Use cores, adicione alarmes e sincronize entre dispositivos. Perfeito para tarefas, ideias e lembretes diários.",
+                    superToolKit: "O Super ToolKit é seu companheiro definitivo no terminal, projetado para trazer eficiência e versatilidade. Essa poderosa ferramenta CLI oferece uma variedade de funcionalidades, como tradução, gerenciamento de tarefas com uma lista de afazeres e conversão rápida de Markdown para HTML, com suporte a hot reload. Seja para organizar suas tarefas diárias ou transformar documentos, o Super ToolKit otimiza seu fluxo de trabalho com rapidez e simplicidade."
                 },
                 otherProjects: {
                     mouseHover: "passe o mouse nos projetos",

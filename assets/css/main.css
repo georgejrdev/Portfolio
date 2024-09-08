@@ -43,8 +43,19 @@
 
     --code-background: #201e27;
     --code-text: #FFFFFF;
-}
 
+    --leadership: #D67E1C;
+    --teamwork: #6FA6E9;
+    --self-knowledge: #8D58B0;
+    --communicative: #EF5757; 
+    --agile: #4EBE74; 
+    --adaptability: #FFB347; 
+    --problem-solving: #3D85C6; 
+    --time-management: #A0C864;
+    --constant-study: #9C6BFF;
+    --creativity: #FF6EEC;
+    --critical-thinking: #F7B731; 
+}
 
 body{
     background-color: var(--body);
