@@ -1,4 +1,5 @@
 <template>
+
     <section>
         <h2>{{ $t("portfolio.skills") }}</h2>
 
@@ -33,12 +34,8 @@
             <PortfolioSkillsMinimalComponentsSkill text="MVC" backgroundColor="#F58219" />
         </div>
     </section>
+    
 </template>
-
-
-<script lang="ts" setup>
-
-</script>
 
 
 <style scoped>

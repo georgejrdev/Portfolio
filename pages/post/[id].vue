@@ -1,66 +1,77 @@
 <template>
-    <section>
-        <input class="button" id="back" type="button" value="" @click="back">
-        <input class="button" id="pt" type="button" value="" @click="changeLanguage('pt')">
-        <input class="button" id="en" type="button" value="" @click="changeLanguage('en')">
+    
+    <div>
+
+        <nav>
+            <input class="button" id="back" type="button" value="" @click="back">
+            <input class="button" id="pt" type="button" value="" @click="changeLanguage('pt')">
+            <input class="button" id="en" type="button" value="" @click="changeLanguage('en')">
+        </nav>
 
         <div id="read" ref="mainElement">
-            <h1 ref="h1Element">{{ title }}</h1>
-            <p id="author">~By <a target="_blank" id="author-link" href="https://portfolio-georgejrdev.vercel.app/">George Júnior</a></p>
-            <p ref="pElement" v-html="content"></p>
+            <header>
+                <h1 ref="h1Element">{{ title }}</h1>
+                <p id="author">~By <a target="_blank" id="author-link" href="https://portfolio-georgejrdev.vercel.app/">George Júnior</a></p>
+            </header>
+
+            <main>
+                <p ref="pElement" v-html="content"></p>
+            </main>
         </div>
-    </section>
+
+    </div>
+
 </template>
 
 
 <script setup lang="ts">
 
-import type { AllPosts, Post } from "~/assets/save/posts"
-import { allPosts as initialPosts } from "~/assets/save/posts"
+    import type { AllPosts, Post } from "~/assets/save/posts"
+    import { allPosts as initialPosts } from "~/assets/save/posts"
 
-const defaultLanguage: keyof AllPosts = "pt"
+    const defaultLanguage: keyof AllPosts = "pt"
 
-useHead({
-    title: "Post - George Júnior"
-})
+    useHead({
+        title: "Post - George Júnior"
+    })
 
-const route = useRoute()
-const id = Number(route.params.id)
+    const route = useRoute()
+    const id = Number(route.params.id)
 
-const language = ref<keyof AllPosts>(defaultLanguage)
-const title = ref<string>("")
-const content = ref<string>("")
+    const language = ref<keyof AllPosts>(defaultLanguage)
+    const title = ref<string>("")
+    const content = ref<string>("")
 
-const back = () => {
-    const currentUrl = window.location.href
-    const url = new URL(currentUrl)
-    url.pathname = "/blog"
-    window.location.href = url.toString()    
-}
-
-const { locale, setLocale } = useI18n()
-
-const changeLanguage = (language:string)=>{
-    setLocale(language)
-    localStorage.setItem("language", language)
-    window.location.reload()
-}
-
-onMounted(() => {
-    if (typeof window !== "undefined") {
-        const storedLanguage = localStorage.getItem("language") as keyof AllPosts | null
-        language.value = storedLanguage ?? defaultLanguage
+    const back = () => {
+        const currentUrl = window.location.href
+        const url = new URL(currentUrl)
+        url.pathname = "/blog"
+        window.location.href = url.toString()    
     }
 
-    const post = initialPosts[language.value].find((p: Post) => p.id === id)
-        
-    if (post) {
-        title.value = post.title
-        content.value = post.content
+    const { setLocale } = useI18n()
+
+    const changeLanguage = (language:string)=>{
+        setLocale(language)
+        localStorage.setItem("language", language)
+        window.location.reload()
     }
-})
+
+    onMounted(() => {
+        if (typeof window !== "undefined") {
+            const storedLanguage = localStorage.getItem("language") as keyof AllPosts | null
+            language.value = storedLanguage ?? defaultLanguage
+        }
+
+        const post = initialPosts[language.value].find((p: Post) => p.id === id)
+            
+        if (post) {
+            title.value = post.title
+            content.value = post.content
+        }
+    })
+    
 </script>
-
 
 
 <style scoped>
@@ -115,7 +126,7 @@ onMounted(() => {
         background-size: 60%;
     }
 
-    section {
+    div {
         width: 100vw;
         max-width: 100%;
         background-color: rgb(253, 253, 253);
@@ -172,4 +183,5 @@ onMounted(() => {
             max-width: 60%;
         }           
     }
+    
 </style>  

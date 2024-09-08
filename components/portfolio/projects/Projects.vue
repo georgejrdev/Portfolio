@@ -1,8 +1,10 @@
 <template>
+
     <section id="projects">
         <h2>{{ $t("portfolio.otherProjects.mouseHover") }}</h2>
 
         <div id="project-container">
+
             <PortfolioProjectsMinimalComponentsProject
                 :idContent="'project-path'"
                 :idAbout="'about-path'"
@@ -126,25 +128,31 @@
                 :urlDeploy="'https://georgejrdev.github.io/Link-Tree'"
                 :lang="'JavaScript'"
             />
+
         </div>
     </section>
+
 </template>
 
+
 <script lang="ts" setup>
-import pathImage from "~/assets/images/projects/path.png"
-import hamburgueriaImage from "~/assets/images/projects/hamburgueria.png"
-import marioImage from "~/assets/images/projects/mario.png"
-import gamesOnlineImage from "~/assets/images/projects/games-online.png"
-import organizadorPastasImage from "~/assets/images/projects/organizador-de-pastas.png"
-import libUtilsImage from "~/assets/images/projects/lib-utils.png"
-import cityInfoImage from "~/assets/images/projects/info-city.png"
-import ratingSystemImage from "~/assets/images/projects/rating-system.png"
-import audiobookGeneratorImage from "~/assets/images/projects/audiobook-generator.png"
-import toolkitImage from "~/assets/images/projects/toolkit.png"
-import linkTreeImage from "~/assets/images/projects/link-tree.png"
+
+    import pathImage from "~/assets/images/projects/path.png"
+    import hamburgueriaImage from "~/assets/images/projects/hamburgueria.png"
+    import marioImage from "~/assets/images/projects/mario.png"
+    import gamesOnlineImage from "~/assets/images/projects/games-online.png"
+    import organizadorPastasImage from "~/assets/images/projects/organizador-de-pastas.png"
+    import libUtilsImage from "~/assets/images/projects/lib-utils.png"
+    import cityInfoImage from "~/assets/images/projects/info-city.png"
+    import ratingSystemImage from "~/assets/images/projects/rating-system.png"
+    import audiobookGeneratorImage from "~/assets/images/projects/audiobook-generator.png"
+    import toolkitImage from "~/assets/images/projects/toolkit.png"
+    import linkTreeImage from "~/assets/images/projects/link-tree.png"
+
 </script>
 
 <style scoped>
+
     section{
         margin-bottom: 5vh;
     }
@@ -173,4 +181,5 @@ import linkTreeImage from "~/assets/images/projects/link-tree.png"
             text-align: center;
         }
     }
+    
 </style>

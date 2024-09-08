@@ -1,4 +1,5 @@
 <template>
+
     <PortfolioHeader />
     
     <main>
@@ -32,33 +33,30 @@
     </main>
 
     <Footer />
+
 </template>
 
 
 <script lang="ts" setup>
-import laptopImage from "~/assets/images/laptop.png"
-import cellphoneImage from "~/assets/images/cellphone.png"
 
-useHead({
-    title: "Portfolio - George Júnior"
-})
+    import laptopImage from "~/assets/images/laptop.png"
+    import cellphoneImage from "~/assets/images/cellphone.png"
 
-const { locale, setLocale } = useI18n()
+    useHead({
+        title: "Portfolio - George Júnior"
+    })
 
-onMounted(() => {
-    let language = localStorage.getItem("language")
+    const { setLocale } = useI18n()
 
-    if (!language){
-        language = "pt"
-        localStorage.setItem("language", language)
-    }
-    
-    setLocale(language)
-})
+    onMounted(() => {
+        let language = localStorage.getItem("language")
+
+        if (!language){
+            language = "pt"
+            localStorage.setItem("language", language)
+        }
+        
+        setLocale(language)
+    })
 
 </script>
-
-
-<style scoped>
-
-</style>

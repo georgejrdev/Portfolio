@@ -1,4 +1,5 @@
 <template>
+   
     <section :id="idSection">
         <h2>{{ title }}</h2>
         <p>{{ description }}</p>
@@ -9,38 +10,41 @@
             <PortfolioItensLinkButton text="GITHUB" :link="urlGithub" backgroundColor="#2C2C2C" />
             <PortfolioItensLinkButton text="DEPLOY" :link="urlDeploy" backgroundColor="#5A5A5A" />
         </div>
+   
     </section>
 </template>
 
 
 <script lang="ts" setup>
-import { onMounted, onBeforeUnmount, defineProps } from "vue"
-import { adjustSection } from "~/utils/changeElementsOrder"
 
-interface Props {
-    idSection: string;
-    title: string;
-    description:string;
-    urlImage:string;
-    urlDeploy:string;
-    urlGithub:string;
-    direction:string;
-}
+    import { onMounted, onBeforeUnmount, defineProps } from "vue"
+    import { adjustSection } from "~/utils/changeElementsOrder"
 
-const props = defineProps<Props>()
+    interface Props {
+        idSection: string;
+        title: string;
+        description:string;
+        urlImage:string;
+        urlDeploy:string;
+        urlGithub:string;
+        direction:string;
+    }
 
-function adjustProjectStructure() {
-    adjustSection(props.idSection,props.direction)
-}
+    const props = defineProps<Props>()
 
-onMounted(() => {
-    adjustProjectStructure()
-    window.addEventListener("resize", adjustProjectStructure)
-})
+    function adjustProjectStructure() {
+        adjustSection(props.idSection,props.direction)
+    }
 
-onBeforeUnmount(() => {
-    window.removeEventListener("resize", adjustProjectStructure)
-})
+    onMounted(() => {
+        adjustProjectStructure()
+        window.addEventListener("resize", adjustProjectStructure)
+    })
+
+    onBeforeUnmount(() => {
+        window.removeEventListener("resize", adjustProjectStructure)
+    })
+
 </script>
 
 
@@ -119,4 +123,5 @@ onBeforeUnmount(() => {
             background-size: contain;
         }
     }
+    
 </style>

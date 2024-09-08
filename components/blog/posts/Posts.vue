@@ -1,4 +1,5 @@
 <template>
+
     <section id="posts">
         <BlogPostsMinimalComponentsPost
             v-for="post in posts"
@@ -7,31 +8,34 @@
             :info="post.info"
             :color="post.color"/>
     </section>
+    
 </template>
 
 
 <script setup lang="ts">
-import type { Post, AllPosts } from "~/assets/save/posts"
-import { allPosts } from "~/assets/save/posts"
 
-const defaultLanguage: keyof AllPosts = "pt"
+    import type { Post, AllPosts } from "~/assets/save/posts"
+    import { allPosts } from "~/assets/save/posts"
 
-const posts = ref<Post[]>([])
-const language = ref<keyof AllPosts>(defaultLanguage)
+    const defaultLanguage: keyof AllPosts = "pt"
 
-const initialize = () => {
-    if (typeof window !== "undefined") {
-        const storedLanguage = localStorage.getItem("language") as keyof AllPosts | null
-        language.value = storedLanguage ?? defaultLanguage
-        localStorage.setItem("language", language.value)
+    const posts = ref<Post[]>([])
+    const language = ref<keyof AllPosts>(defaultLanguage)
+
+    const initialize = () => {
+        if (typeof window !== "undefined") {
+            const storedLanguage = localStorage.getItem("language") as keyof AllPosts | null
+            language.value = storedLanguage ?? defaultLanguage
+            localStorage.setItem("language", language.value)
+        }
+        
+        posts.value = allPosts[language.value] || []
     }
-    
-    posts.value = allPosts[language.value] || []
-}
 
-onMounted(() => {
-    initialize()
-})
+    onMounted(() => {
+        initialize()
+    })
+    
 </script>
 
 

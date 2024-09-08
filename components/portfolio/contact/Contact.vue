@@ -1,18 +1,16 @@
 <template>
+    
     <section id="contact">
         <h2>{{ $t('portfolio.contact.title') }}</h2>
         <h3>{{ $t('portfolio.contact.message') }}</h3>
         <p>ctt.georgejr@gmail.com</p>
     </section>
+
 </template>
 
 
-<script setup lang="ts">
-
-</script>
-
-
 <style scoped>
+
     section{
         padding-top: 30vh;
         height: 70vh;

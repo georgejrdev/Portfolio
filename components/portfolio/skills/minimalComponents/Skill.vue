@@ -1,17 +1,21 @@
 <template>
+    
     <div :style="{ backgroundColor: backgroundColor }">
         <p>{{ text }}</p>
     </div>
+
 </template>
 
 
 <script lang="ts" setup>
-interface Props {
-    backgroundColor: string;
-    text: string;
-}
 
-defineProps<Props>()
+    interface Props {
+        backgroundColor: string;
+        text: string;
+    }
+
+    defineProps<Props>()
+    
 </script>
 
 

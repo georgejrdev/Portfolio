@@ -1,5 +1,6 @@
 <template>
     <BlogHeader />
+
     <main>
         <BlogPosts />
     </main>
@@ -9,27 +10,31 @@
 
 
 <script setup lang="ts">
-useHead({
-    title: "Blog - George Júnior"
-})
 
-const { locale, setLocale } = useI18n()
+    useHead({
+        title: "Blog - George Júnior"
+    })
 
-onMounted(() => {
-    let language = localStorage.getItem("language")
+    const { setLocale } = useI18n()
 
-    if (!language){
-        language = "pt"
-        localStorage.setItem("language", language)
-    }
+    onMounted(() => {
+        let language = localStorage.getItem("language")
+
+        if (!language){
+            language = "pt"
+            localStorage.setItem("language", language)
+        }
+        
+        setLocale(language)
+    })
     
-    setLocale(language)
-})
 </script>
 
 
 <style scoped>
+
     main{
         padding-bottom: 10vh;
     }
+
 </style>

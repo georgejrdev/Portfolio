@@ -1,5 +1,7 @@
 <template>
+
     <header>
+
         <NavBar
             :pageLink="'/'"
             :pageName="$t('nav.seePortfolio')"
@@ -7,7 +9,6 @@
         />
 
         <div id="content">
-            
             <MainTitle 
                 :beforeEmphasis="$t('blog.title.before')"
                 :emphasis="$t('blog.title.emphasis')"
@@ -15,12 +16,11 @@
                 :marginBottom="'1vh'"
             />
         </div>
+
     </header>
+
 </template>
 
-<script setup lang="ts">
-
-</script>
 
 <style scoped>
 

@@ -1,4 +1,5 @@
-export function adjustSection(sectionId:string,direction:string) {
+export function adjustSection(sectionId:string,direction:string): void{
+    
     const projectContainer = document.getElementById(sectionId)
     
     if (!projectContainer) return

@@ -1,5 +1,7 @@
 <template>
+    
     <section id="about-me">
+    
         <div id="about-me-content">
             <h2>{{ $t("portfolio.aboutMe.title") }}</h2>
             <p id="description">{{ $t("portfolio.aboutMe.description") }}</p>
@@ -10,12 +12,8 @@
 
         <div id="decoration"></div>
     </section>
+
 </template>
-
-
-<script setup lang="ts">
-
-</script>
 
 
 <style scoped>

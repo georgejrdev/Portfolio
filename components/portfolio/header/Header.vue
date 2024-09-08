@@ -1,27 +1,31 @@
 <template>
+
     <header>
 
         <NavBar 
             :pageLink="'/blog'"
             :pageName="$t('nav.seeArticles')"
-            :navigate="true"/>
+            :navigate="true"
+        />
 
         <div id="content">
-            <div id="presentation">
-                
+            
+            <div id="presentation">   
                 <MainTitle 
-                :beforeEmphasis="$t('portfolio.title.before')"
-                :emphasis="'FullStack'"
-                :afterEmphasis="'developer'"
-                :marginBottom="'0'"
+                    :beforeEmphasis="$t('portfolio.title.before')"
+                    :emphasis="'FullStack'"
+                    :afterEmphasis="'developer'"
+                    :marginBottom="'0'"
                 />                
 
                 <PortfolioHeaderMinimalComponentsHeaderLangs />
             </div>
+
             <PortfolioHeaderMinimalComponentsHeaderDecoration />
         </div>
 
     </header>
+
 </template>
 
 

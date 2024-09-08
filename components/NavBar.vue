@@ -8,6 +8,7 @@
         </div>
 
         <div id="buttons">
+            
             <div v-if="props.navigate" id="navigate">
                 <p @click="scrollTo('desktop-project')">{{ $t('nav.projects') }}</p>
                 <p @click="scrollTo('about-me')" >{{ $t('nav.about') }}</p>
@@ -24,53 +25,56 @@
                     <div @click="setLanguage('pt')" id="pt" class="link"></div>
                     <div @click="setLanguage('en')" id="en" class="link"></div>
                 </div>
+                
                 <div @click="showSelectLanguage()" id="language" class="link"> </div>
             </div>
+
         </div>
     </nav>
+    
 </template>
 
 
 <script lang="ts" setup>
 
-interface Props {
-    pageName:string
-    pageLink:string
-    navigate:boolean
-}
-
-const props = defineProps<Props>()
-
-function redirectToGithub(){
-    window.open("https://github.com/georgejrdev", "_blank")
-}    
-
-function redirectToLinkedin(){
-    window.open("https://www.linkedin.com/in/georgejrdev/", "_blank")
-}
-
-function scrollTo(id:string){
-    const element = document.getElementById(id)
-    if (element) {
-        element.scrollIntoView()
+    interface Props {
+        pageName:string
+        pageLink:string
+        navigate:boolean
     }
-}
 
-const { locale, setLocale } = useI18n()
+    const props = defineProps<Props>()
 
-let showLang = ref(false)
-let showLinks = ref(true)
+    function redirectToGithub(){
+        window.open("https://github.com/georgejrdev", "_blank")
+    }    
 
-function showSelectLanguage(){
-    showLang.value = !showLang.value
-    showLinks.value = !showLinks.value
-}
+    function redirectToLinkedin(){
+        window.open("https://www.linkedin.com/in/georgejrdev/", "_blank")
+    }
 
-function setLanguage(language:string){
-    setLocale(language)
-    localStorage.setItem("language", language)
-    showSelectLanguage()
-}
+    function scrollTo(id:string){
+        const element = document.getElementById(id)
+        if (element) {
+            element.scrollIntoView()
+        }
+    }
+
+    const { setLocale } = useI18n()
+
+    let showLang = ref(false)
+    let showLinks = ref(true)
+
+    function showSelectLanguage(){
+        showLang.value = !showLang.value
+        showLinks.value = !showLinks.value
+    }
+
+    function setLanguage(language:string){
+        setLocale(language)
+        localStorage.setItem("language", language)
+        showSelectLanguage()
+    }
 
 </script>
 
@@ -181,4 +185,5 @@ function setLanguage(language:string){
             display: flex;
         }
     }
+
 </style>

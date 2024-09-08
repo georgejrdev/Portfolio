@@ -1,20 +1,24 @@
 <template>
+
     <div @click="toLink(link)" :style="{ backgroundColor: backgroundColor }"><p>{{ text }}</p></div>
+
 </template>
 
 
 <script lang="ts" setup>
-interface Props {
-    backgroundColor: string;
-    text: string;
-    link:string;
-}
+    
+    interface Props {
+        backgroundColor: string;
+        text: string;
+        link:string;
+    }
 
-defineProps<Props>()
+    defineProps<Props>()
 
-function toLink(link:string){
-    window.open(link, "_blank")
-}
+    function toLink(link: string){
+        window.open(link, "_blank")
+    }
+
 </script>
 
 
