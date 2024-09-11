@@ -1,15 +1,13 @@
 <template>
 
-    <div @click="toPost(id)" d="post">
+    <div @click="toPost(id)" id="post" :style="{backgroundColor: backgroundColor}">
+        <h2 :style="{color: color}">{{title}}</h2>
 
-        <div id="content">
-            <h2 :style="{color:color}">{{ title }}</h2>
+        <div id="tags">
+            <div v-for="(tag, index) in tags" :key="index" class="tag">
+                <p>{{tag}}</p>
+            </div>
         </div>
-
-        <div id="info">
-            <p id="p-info">{{ info }}</p>
-        </div>
-
     </div>
 
 </template>
@@ -25,6 +23,8 @@
     }
 
     const props = defineProps<Props>()
+    const backgroundColor = ((props.id % 2) == 0) ? "#2B2932" : "#26242D"
+    const tags = ["web", "mobile"] // ATENÇÃO AQUI BRO
 
     function toPost(id:number){
         const currentUrl = window.location.href
@@ -42,45 +42,33 @@
         cursor:pointer;
     }
 
-    h2,p{
+    h2{
         margin:0;
-        text-align: center;
+        text-align: left;
     }
     
     h2 {
-        font-size: 20px;
-        max-width: 190px;
-        width: 190px;
+        font-size: 15px;
     }        
 
     #post{
-        width: 210px;
-        height: 210px;
-        border-radius: 48px;
-    }
-
-    #content{
-        width: 210px;
-        height: 160px;
-        border-radius: 48px 48px 0 0;
-        background-color: var(--post);
+        width: 80vw;
+        height: 40px;
+        padding: 15px;
         display: flex;
         align-items: center;
-        justify-content: center;
     }
-
-    #info{
-        width: 210px;
-        height: 50px;
-        border-radius: 0 0 48px 48px;
-        background-color: var(--info);
+    
+    #tags{
         display: flex;
-        align-items: center;
-        justify-content: center;
+        gap: 5px;
     }
 
-    p{
-        color: var(--p-info);
+    .tag{
+        padding: 5px;
+        font-family: "Inter", sans-serif;
+        font-size: 12px;
+        background-color: rgb(116, 116, 9); /* SÓ PRA TESTE MAN */
     }
 
 </style>

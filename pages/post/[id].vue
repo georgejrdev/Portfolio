@@ -1,7 +1,5 @@
 <template>
-    
     <div>
-
         <nav>
             <input class="button" id="back" type="button" value="" @click="back">
             <input class="button" id="pt" type="button" value="" @click="changeLanguage('pt')">
@@ -18,11 +16,8 @@
                 <p ref="pElement" v-html="content"></p>
             </main>
         </div>
-
     </div>
-
 </template>
-
 
 <script setup lang="ts">
 
@@ -30,11 +25,6 @@
     import { allPosts as initialPosts } from "~/assets/save/posts"
 
     const defaultLanguage: keyof AllPosts = "pt"
-
-    useHead({
-        title: "Post - George Júnior"
-    })
-
     const route = useRoute()
     const id = Number(route.params.id)
 
@@ -46,42 +36,54 @@
         const currentUrl = window.location.href
         const url = new URL(currentUrl)
         url.pathname = "/blog"
-        window.location.href = url.toString()    
+        window.location.href = url.toString()
     }
 
     const { setLocale } = useI18n()
 
-    const changeLanguage = (language:string)=>{
-        setLocale(language)
-        localStorage.setItem("language", language)
-        window.location.reload()
-    }
-
-    onMounted(() => {
-        if (typeof window !== "undefined") {
-            const storedLanguage = localStorage.getItem("language") as keyof AllPosts | null
-            language.value = storedLanguage ?? defaultLanguage
-        }
+    const changeLanguage = (newLanguage: string) => {
+        setLocale(newLanguage)
+        localStorage.setItem("language", newLanguage)
+        language.value = newLanguage as keyof AllPosts
 
         const post = initialPosts[language.value].find((p: Post) => p.id === id)
-            
+        
         if (post) {
             title.value = post.title
             content.value = post.content
         }
+    }
+
+    const post = computed(() => {
+        return initialPosts[language.value].find((p: Post) => p.id === id) || { title: '', content: '' }
     })
-    
+
+    title.value = post.value.title
+    content.value = post.value.content
+
+    if (process.client) {
+        const storedLanguage = localStorage.getItem("language") as keyof AllPosts | null
+        language.value = storedLanguage ?? defaultLanguage
+
+        const post = initialPosts[language.value].find((p: Post) => p.id === id)
+
+        if (post) {
+            title.value = post.title
+            content.value = post.content
+        }
+    }
+
 </script>
 
 
 <style scoped>
 
-    *,::v-deep span{
-        color:black;
+    *,::v-deep span {
+        color: black;
         font-family: 'Inter';
         letter-spacing: 0.35px;
     }
-    
+
     .button {
         position: fixed;
         width: 40px;
@@ -94,9 +96,9 @@
         background-color: black;
         cursor: pointer;
     }
-    
-    ::v-deep .article-code{
-        display:block;
+
+    ::v-deep .article-code {
+        display: block;
         background-color: var(--code-background);
         color: white;
         font-family: "JetBrains Mono", monospace;
@@ -112,27 +114,27 @@
         background-image: url("~/assets/images/back.png");
     }
 
-    #pt{
+    #pt {
         top: 60px;
         right: 15px;
         background-image: url("~/assets/images/pt.png");
         background-size: 60%;
     }
 
-    #en{
+    #en {
         top: 110px;
         right: 15px;
         background-image: url("~/assets/images/en.png");
         background-size: 60%;
     }
-
+    
     div {
         width: 100vw;
         max-width: 100%;
         background-color: rgb(253, 253, 253);
         min-height: 100vh;
     }
-    
+
     h1 {
         font-size: xx-large;
         text-align: center;
@@ -159,12 +161,12 @@
         margin-bottom: 5vh;
     }
 
-    h4,h5,h6{
+    h4,h5,h6 {
         margin-top: 5vh;
-        margin-bottom: 5vh
+        margin-bottom: 5vh;
     }
 
-    ::v-deep span{
+    ::v-deep span {
         font-weight: normal;
     }
 
@@ -183,5 +185,5 @@
             max-width: 60%;
         }           
     }
-    
+
 </style>  

@@ -1,11 +1,9 @@
 <template>
-
     <PortfolioHeader />
-    
-    <PortfolioSkills />
-    
-    <main>
 
+    <PortfolioSkills />
+
+    <main>
         <PortfolioBestProject
             :idSection="'desktop-project'"
             :title="'Super ToolKit'"
@@ -25,7 +23,7 @@
             :urlDeploy="'https://github.com/georgejrdev/Feature-Flag-Controller'" 
             :direction="'row'"
         />
-        
+
         <PortfolioBestProject 
             :idSection="'mobile-project'" 
             :title="'Post Its'" 
@@ -35,16 +33,15 @@
             :urlDeploy="'https://play.google.com/store/apps/details?id=com.georgejrdev.postits&pcampaignid=web_share'" 
             :direction="'row-reverse'"
         />
-        
+
         <PortfolioProjects />    
     </main>
-    
+
     <PortfolioAbout />
 
     <PortfolioContact />
 
     <Footer />
-
 </template>
 
 
@@ -55,20 +52,19 @@
     import postIts from "~/assets/images/projects/post-its.png"
 
     useHead({
-        title: "Portfolio - George Júnior"
+    title: "Portfolio - George Júnior"
     })
 
     const { setLocale } = useI18n()
+    const defaultLanguage = 'pt'
 
-    onMounted(() => {
-        let language = localStorage.getItem("language")
-
-        if (!language){
-            language = "pt"
-            localStorage.setItem("language", language)
-        }
-        
+    if (process.client) {
+        let language = localStorage.getItem("language") || defaultLanguage
         setLocale(language)
-    })
+        localStorage.setItem("language", language)
+    
+    } else {
+        setLocale(defaultLanguage)
+    }
 
 </script>
