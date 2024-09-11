@@ -161,9 +161,8 @@
         margin-bottom: 5vh;
     }
 
-    h4,h5,h6 {
-        margin-top: 5vh;
-        margin-bottom: 5vh;
+    ::v-deep h4,::v-deep h5,::v-deep h6, ::v-deep strong {
+        font-family: 'Inter', sans-serif;
     }
 
     ::v-deep span {
