@@ -17,7 +17,7 @@
         margin-top: 5vh;
         width: 80vw;
         height: 70px;
-        background: url("~/assets/images/langs.png");
+        background: url("~/assets/images/langs.webp");
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;

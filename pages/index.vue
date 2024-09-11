@@ -47,9 +47,9 @@
 
 <script lang="ts" setup>
 
-    import featureControl from "~/assets/images/projects/feature-control.png"
-    import superToolKit from "~/assets/images/projects/super-toolkit.png"
-    import postIts from "~/assets/images/projects/post-its.png"
+    import featureControl from "~/assets/images/projects/feature-control.webp"
+    import superToolKit from "~/assets/images/projects/super-toolkit.webp"
+    import postIts from "~/assets/images/projects/post-its.webp"
 
     useHead({
     title: "Portfolio - George Júnior"

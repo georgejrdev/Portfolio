@@ -111,20 +111,20 @@
     #back {
         top: 10px;
         right: 15px;
-        background-image: url("~/assets/images/back.png");
+        background-image: url("~/assets/images/back.webp");
     }
 
     #pt {
         top: 60px;
         right: 15px;
-        background-image: url("~/assets/images/pt.png");
+        background-image: url("~/assets/images/pt.webp");
         background-size: 60%;
     }
 
     #en {
         top: 110px;
         right: 15px;
-        background-image: url("~/assets/images/en.png");
+        background-image: url("~/assets/images/en.webp");
         background-size: 60%;
     }
     

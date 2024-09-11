@@ -44,7 +44,7 @@
         width: 85vw;
         height: 30vh;
         border-radius: 48px;
-        background-image: url("~/assets/images/code-decoration-1.png");
+        background-image: url("~/assets/images/code-decoration.webp");
         background-repeat: no-repeat;
         background-color: var(--decoration);
         background-size: 130%;

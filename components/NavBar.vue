@@ -157,11 +157,11 @@
     }
 
     #github{
-        background-image: url("~/assets/images/github.png");
+        background-image: url("~/assets/images/github.webp");
     }
 
     #linkedin{
-        background-image: url("~/assets/images/linkedin.png");
+        background-image: url("~/assets/images/linkedin.webp");
     }
 
     #language{
@@ -172,12 +172,12 @@
 
     #pt{
         background-size: 60%;
-        background-image: url("~/assets/images/pt.png");
+        background-image: url("~/assets/images/pt.webp");
     }
     
     #en{
         background-size: 60%;
-        background-image: url("~/assets/images/en.png");
+        background-image: url("~/assets/images/en.webp");
     }
 
     @media screen and (min-width: 1024px) {

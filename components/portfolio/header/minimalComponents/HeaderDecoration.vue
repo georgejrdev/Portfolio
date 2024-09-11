@@ -12,7 +12,7 @@
         margin-top: 6vh;
         width: 80vw;
         height: 35vh;
-        background: url("~/assets/images/header-decoration.png");
+        background: url("~/assets/images/header-decoration.webp");
         border-radius: 48px;
         background-repeat: no-repeat;
         background-size: 130%;
