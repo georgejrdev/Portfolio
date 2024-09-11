@@ -6,8 +6,7 @@ export default defineNuxtConfig({
             crawlLinks: true,
             routes: [
                 "/",
-                "/blog",  
-                "/post/[...slug]",
+                "/blog",
             ],
         }
     },  
