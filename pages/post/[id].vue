@@ -19,18 +19,30 @@
     </div>
 </template>
 
+
 <script setup lang="ts">
 
-    import type { AllPosts, Post } from "~/assets/save/posts"
-    import { allPosts as initialPosts } from "~/assets/save/posts"
-
-    const defaultLanguage: keyof AllPosts = "pt"
+    import type { Post } from "~/utils/posts"
+    import { setPostsInCookies, getPostsFromCookies } from "~/utils/cookies"
+    
     const route = useRoute()
     const id = Number(route.params.id)
-
-    const language = ref<keyof AllPosts>(defaultLanguage)
     const title = ref<string>("")
     const content = ref<string>("")
+
+    const { locale, setLocale } = useI18n()
+    const { $getPosts } = useNuxtApp();
+
+    const changeLanguage = (newLanguage: string) => {
+        setLocale(newLanguage)
+        localStorage.setItem("language", newLanguage)
+    }
+
+    const posts = ref<Post[]>([])
+    const error = ref<string | null>(null)
+
+    const titleKeyLanguage: keyof Post = (locale.value == 'pt') ? 'ptTitle' : 'enTitle'
+    const contentKeyLanguage: keyof Post = (locale.value == 'pt') ? 'ptContent' : 'enContent'
 
     const back = () => {
         const currentUrl = window.location.href
@@ -39,39 +51,51 @@
         window.location.href = url.toString()
     }
 
-    const { setLocale } = useI18n()
+    const loadPost = () => {
+        if (posts.value[id]) {
+            title.value = posts.value[id][titleKeyLanguage] || "Title not found."
+            content.value = posts.value[id][contentKeyLanguage] || "Content not found."
 
-    const changeLanguage = (newLanguage: string) => {
-        setLocale(newLanguage)
-        localStorage.setItem("language", newLanguage)
-        language.value = newLanguage as keyof AllPosts
+        } else {
+            error.value = "Post not found."
+        }
+    }
 
-        const post = initialPosts[language.value].find((p: Post) => p.id === id)
+    const readLambdaPosts = async () => {
+        const response = await $getPosts()
+        error.value = response[1]
+
+        if (error.value || response[0] == null) return
         
-        if (post) {
-            title.value = post.title
-            content.value = post.content
-        }
+        const sortedPosts = response[0].sort((a: Post, b: Post) => a.id - b.id);
+        posts.value = sortedPosts;
+        
+        loadPost()
     }
 
-    const post = computed(() => {
-        return initialPosts[language.value].find((p: Post) => p.id === id) || { title: '', content: '' }
+    if (getPostsFromCookies().length > 0) {
+        posts.value = getPostsFromCookies()
+        loadPost() 
+        console.log("Read from cookies")
+
+    } else {
+        readLambdaPosts()
+        setPostsInCookies(posts.value, 12)
+        console.log("Read from lambda")
+    }
+
+    onMounted(() => {
+        if (import.meta.client){
+            const storeLanguage = localStorage.getItem("language")
+
+            if (!storeLanguage){
+                localStorage.setItem("language", "pt")
+                setLocale("pt")
+            } else {
+                setLocale(storeLanguage)
+            }
+        }
     })
-
-    title.value = post.value.title
-    content.value = post.value.content
-
-    if (process.client) {
-        const storedLanguage = localStorage.getItem("language") as keyof AllPosts | null
-        language.value = storedLanguage ?? defaultLanguage
-
-        const post = initialPosts[language.value].find((p: Post) => p.id === id)
-
-        if (post) {
-            title.value = post.title
-            content.value = post.content
-        }
-    }
 
 </script>
 
@@ -170,9 +194,8 @@
     }
 
     #read {
-        padding: 10vw;
-        padding-top: 12vh;
-        padding-bottom: 8vh;
+        padding: 50px;
+        box-sizing: border-box;
         max-width: 100%;
         height: auto;
         background-color: white;

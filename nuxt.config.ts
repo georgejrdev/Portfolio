@@ -45,5 +45,12 @@ export default defineNuxtConfig({
         vueI18n: "./i18n.config.ts",
         locales: ["en", "pt"],
         defaultLocale: "pt",
-    }
+    },
+    
+    runtimeConfig: {
+        public: {
+            accessKey: process.env.AWS_GETPOSTS_USER_ACESS_KEY,
+            secretKey: process.env.AWS_GETPOSTS_USER_SECRET_KEY,
+        }
+      }
 })

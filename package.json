@@ -10,7 +10,9 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@aws-sdk/client-lambda": "^3.651.1",
     "@nuxtjs/i18n": "^8.3.3",
+    "dotenv": "^16.4.5",
     "nuxt": "^3.12.3",
     "vue": "latest"
   },
