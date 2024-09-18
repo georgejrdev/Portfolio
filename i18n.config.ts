@@ -79,6 +79,10 @@ export default defineI18nConfig(() => ({
                     emphasis: "Articles",
                     after: "I have written",
                 },
+                authorInfos: {
+                    by:"By",
+                    youtube:"Available on",
+                }
             },
         },
 
@@ -159,6 +163,10 @@ export default defineI18nConfig(() => ({
                     emphasis: "Artigos",
                     after: "que eu escrevi",
                 },
+                authorInfos: {
+                    by:"Por",
+                    youtube:"Disponível no",
+                }
             },
         }
     }

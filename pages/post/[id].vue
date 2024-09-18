@@ -9,7 +9,8 @@
         <div id="read" ref="mainElement">
             <header>
                 <h1 ref="h1Element">{{ title }}</h1>
-                <p id="author">~By <a target="_blank" id="author-link" href="https://portfolio-georgejrdev.vercel.app/">George Júnior</a></p>
+                <p v-if="youtube" class="author">{{ $t("blog.authorInfos.youtube") }} <a target="_blank" class="author-info" id="youtube-link" :href="youtube">Youtube</a></p>
+                <p class="author">{{ $t("blog.authorInfos.by") }} <a target="_blank" class="author-info" id="author-link" href="https://georgejrdev.github.io/Link-Tree">George Júnior</a></p>
             </header>
 
             <main>
@@ -29,6 +30,7 @@
     const id = Number(route.params.id)
     const title = ref<string>("")
     const content = ref<string>("")
+    const youtube = ref<string>("")
 
     const { locale, setLocale } = useI18n()
     const { $getPosts } = useNuxtApp();
@@ -55,6 +57,7 @@
         if (posts.value[id]) {
             title.value = posts.value[id][titleKeyLanguage] || "Title not found."
             content.value = posts.value[id][contentKeyLanguage] || "Content not found."
+            youtube.value = posts.value[id].youtube || ""
 
         } else {
             error.value = "Post not found."
@@ -67,8 +70,8 @@
 
         if (error.value || response[0] == null) return
         
-        const sortedPosts = response[0].sort((a: Post, b: Post) => a.id - b.id);
-        posts.value = sortedPosts;
+        const sortedPosts = response[0].sort((a: Post, b: Post) => a.id - b.id)
+        posts.value = sortedPosts
         
         loadPost()
     }
@@ -91,6 +94,7 @@
             if (!storeLanguage){
                 localStorage.setItem("language", "pt")
                 setLocale("pt")
+
             } else {
                 setLocale(storeLanguage)
             }
@@ -102,7 +106,7 @@
 
 <style scoped>
 
-    *,::v-deep span {
+    *,:deep() span {
         color: black;
         font-family: 'Inter';
         letter-spacing: 0.35px;
@@ -121,7 +125,7 @@
         cursor: pointer;
     }
 
-    ::v-deep .article-code {
+    :deep() .article-code {
         display: block;
         background-color: var(--code-background);
         color: white;
@@ -167,15 +171,32 @@
     p {
         font-weight: normal;
     }
-
-    #author,#author-link {
+    
+    .author, .author-info {
+        margin-top: 5px;
         font-size: small;
         font-weight: 400;
         text-align: center;
         color: rgb(80, 80, 80);
     }
 
-    ::v-deep h3 {
+    #youtube-link {
+        color: red;
+    }
+
+    #youtube-link:hover {
+        color: rgb(223, 2, 2);
+    }
+
+    #author-link {
+        color: black;
+    }
+
+    #author-link:hover {
+        color: rgb(110, 110, 110);
+    }
+    
+    :deep() h3 {
         font-family: 'Inter';
         color: black;
         letter-spacing: 0.35px;
@@ -185,11 +206,11 @@
         margin-bottom: 5vh;
     }
 
-    ::v-deep h4,::v-deep h5,::v-deep h6, ::v-deep strong {
+    :deep() h4,:deep() h5,:deep() h6, :deep() strong {
         font-family: 'Inter', sans-serif;
     }
 
-    ::v-deep span, ::v-deep s {
+    :deep() span, :deep() s {
         font-weight: normal;
         font-family: 'Inter', sans-serif;
     }
@@ -200,14 +221,14 @@
         max-width: 100%;
         height: auto;
         background-color: white;
-    }
+    }   
 
-    ::v-deep .reference {
+    :deep() .reference {
         display: block;
         color: rgb(51, 123, 218);
     }
 
-    ::v-deep .reference:hover {
+    :deep() .reference:hover {
         display: block;
         color: rgb(31, 95, 179);
     }
