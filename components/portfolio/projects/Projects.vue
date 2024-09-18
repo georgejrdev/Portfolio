@@ -119,6 +119,30 @@
                 :lang="'JavaScript'"
             />
 
+            <PortfolioProjectsMinimalComponentsProject 
+                idContent="project-post-its"
+                idAbout="about-post-its"
+                :description="$t('portfolio.otherProjects.descriptions.postIts')"
+                :urlImage="postIts"
+                :github="true"
+                urlGithub="https://github.com/georgejrdev/Post-Its"
+                :deployed="true"
+                urlDeploy="https://play.google.com/store/apps/details?id=com.georgejrdev.postits&pcampaignid=web_share"
+                lang="JavaScript"
+            />
+
+            <PortfolioProjectsMinimalComponentsProject 
+                idContent="project-shooter"
+                idAbout="about-shooter"
+                :description="$t('portfolio.otherProjects.descriptions.shooter')"
+                :urlImage="shooter"
+                :github="true"
+                urlGithub="https://github.com/georgejrdev/My-Shooter-Friend"
+                :deployed="true"
+                urlDeploy="https://georgejrdev.github.io/My-Shooter-Friend"
+                lang="TypeScript"
+            />
+
         </div>
     </section>
 
@@ -137,6 +161,8 @@
     import ratingSystemImage from "~/assets/images/projects/rating-system.webp"
     import audiobookGeneratorImage from "~/assets/images/projects/audiobook-generator.webp"
     import linkTreeImage from "~/assets/images/projects/link-tree.webp"
+    import shooter from "~/assets/images/projects/shooter.webp"
+    import postIts from "~/assets/images/projects/postits.webp"
 
 </script>
 

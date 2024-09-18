@@ -25,13 +25,13 @@
         />
 
         <PortfolioBestProject 
-            :idSection="'mobile-project'" 
-            :title="'Post Its'" 
-            :urlImage="postIts"
-            :description="$t('portfolio.bestProject.postIts')" 
-            :urlGithub="'https://github.com/georgejrdev/Post-Its'" 
-            :urlDeploy="'https://play.google.com/store/apps/details?id=com.georgejrdev.postits&pcampaignid=web_share'" 
-            :direction="'row-reverse'"
+            idSection="mobile-project" 
+            title="Focus" 
+            :urlImage="focus"
+            :description="$t('portfolio.bestProject.focus')" 
+            urlGithub="https://github.com/official-tstc/Focus" 
+            urlDeploy="https://play.google.com/store/apps/details?id=com.georgejrdev.Focus" 
+            direction="row-reverse"
         />
 
         <PortfolioProjects />    
@@ -49,7 +49,7 @@
 
     import featureControl from "~/assets/images/projects/feature-control.webp"
     import superToolKit from "~/assets/images/projects/super-toolkit.webp"
-    import postIts from "~/assets/images/projects/post-its.webp"
+    import focus from "~/assets/images/projects/focus.webp"
 
     useHead({
     title: "Portfolio - George Júnior"

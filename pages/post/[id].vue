@@ -189,8 +189,9 @@
         font-family: 'Inter', sans-serif;
     }
 
-    ::v-deep span {
+    ::v-deep span, ::v-deep s {
         font-weight: normal;
+        font-family: 'Inter', sans-serif;
     }
 
     #read {
@@ -199,6 +200,16 @@
         max-width: 100%;
         height: auto;
         background-color: white;
+    }
+
+    ::v-deep .reference {
+        display: block;
+        color: rgb(51, 123, 218);
+    }
+
+    ::v-deep .reference:hover {
+        display: block;
+        color: rgb(31, 95, 179);
     }
 
     @media screen and (min-width:1024px) {

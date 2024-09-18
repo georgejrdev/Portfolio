@@ -38,7 +38,7 @@ export default defineI18nConfig(() => ({
 
                 bestProject: {
                     featureControl: "Manage and control your Feature Flags with ease and efficiency. Our solution allows for the creation, updating, and real-time monitoring of all features in your project. Simplify the activation and deactivation of resources, enabling continuous and safe deployment. Optimize the end-user experience by reducing risks and increasing development agility.",
-                    postIts: "Post Its is the perfect app for quickly capturing ideas and reminders. With an intuitive interface, it allows you to easily create, organize, and customize notes. Use colors, add alarms, and sync across devices. Perfect for daily tasks, ideas, and reminders.",
+                    focus: "Focus on what really matters with our Pomodoro app. Maximize your productivity using time management techniques to split work into focused intervals, followed by short breaks. Stay organized, eliminate distractions, and achieve your goals with ease. Transform your routine and make every minute count.",
                     superToolKit: "Super ToolKit is your ultimate command-line companion, designed to bring efficiency and versatility to your terminal. This powerful CLI tool offers a range of functionalities, including translation, task management with a to-do list, and seamless Markdown-to-HTML parsing with hot reload capabilities. Whether you're managing your daily tasks or transforming documents, Super ToolKit optimizes your workflow with speed and simplicity."
                 },
                 otherProjects: {
@@ -53,8 +53,9 @@ export default defineI18nConfig(() => ({
                         infoCity: "API that provides aggregated weather information and news for a city.",
                         ratingSystem: "A ratings manager. Create and organize questions by department for your employees.",
                         audiobook: "Generate audio from a PDF easily and efficiently using Python libraries.",
-                        toolKit: "A CLI to assist in project development. Create ToDos, translate, and chat with AI directly from the terminal.",
-                        linkTree:"A personal link-tree made for practicing sass."
+                        linkTree:"A personal link-tree made for practicing sass.",
+                        shooter:"A game originally created for a classroom activity. In it, you enter a turn-based duel with your friend. ",
+                        postIts:"Create and organize your sticky notes with ease. Get reminders for unfinished tasks."
                     },
                 },
                 aboutMe: {
@@ -117,7 +118,7 @@ export default defineI18nConfig(() => ({
 
                 bestProject: {
                     featureControl: "Gerencie e controle suas Features Flags com facilidade e eficiência. Nossa solução permite a criação, atualização e monitoramento em tempo real de todas as funcionalidades do seu projeto. Simplifique a ativação e desativação de recursos, permitindo uma implementação contínua e segura. Otimize a experiência do usuário final, reduzindo riscos e aumentando a agilidade no desenvolvimento.",
-                    postIts: "O Post Its é o app ideal para capturar ideias e lembretes rapidamente. Com interface intuitiva, permite criar, organizar e personalizar notas facilmente. Use cores, adicione alarmes e sincronize entre dispositivos. Perfeito para tarefas, ideias e lembretes diários.",
+                    focus: "Foque no que realmente importa com o nosso app de Pomodoro. Maximize sua produtividade utilizando técnicas de gestão de tempo que dividem o trabalho em intervalos focados, seguidos de curtas pausas. Mantenha-se organizado, elimine distrações e atinja suas metas com facilidade. Transforme sua rotina e aproveite cada minuto.",
                     superToolKit: "O Super ToolKit é seu companheiro definitivo no terminal, projetado para trazer eficiência e versatilidade. Essa poderosa ferramenta CLI oferece uma variedade de funcionalidades, como tradução, gerenciamento de tarefas com uma lista de afazeres e conversão rápida de Markdown para HTML, com suporte a hot reload. Seja para organizar suas tarefas diárias ou transformar documentos, o Super ToolKit otimiza seu fluxo de trabalho com rapidez e simplicidade."
                 },
                 otherProjects: {
@@ -132,8 +133,9 @@ export default defineI18nConfig(() => ({
                         infoCity: "API que fornece um agregado de informações climáticas e notícias de uma cidade.",
                         ratingSystem: "Um gerenciador de avaliações. Crie e organize questões por setores para seus funcionários.",
                         audiobook: "Gere áudio através de um PDF de forma simples e eficiente utilizando bibliotecas de Python.",
-                        toolKit: "Um CLI para auxiliar no desenvolvimento de projetos. Crie ToDos, traduza e converse com I.A. direto do terminal.",
-                        linkTree:"Um link-tree pessoal feito para praticar o sass."
+                        linkTree:"Um link-tree pessoal feito para praticar o sass.",
+                        shooter:"Um jogo originalmente criado para uma atividade em sala de aula. Nele, você entra em um duelo em turnos com seu amigo.",
+                        postIts:"Crie e organize seus post-its com facilidade. Relembre de tarefas que não foram concluídas.",
                     },
                 },
                 aboutMe: {
