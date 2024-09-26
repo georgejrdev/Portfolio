@@ -7,6 +7,7 @@
             <PortfolioSkillsMinimalComponentsSkill alt="Spring" :background="springSkill" />
             <PortfolioSkillsMinimalComponentsSkill alt="TypeScript" :background="tsSkill" />
             <PortfolioSkillsMinimalComponentsSkill alt="React Native" :background="reactNativeSkill" />
+            <PortfolioSkillsMinimalComponentsSkill alt="Angular" :background="angularSkill" />
             <PortfolioSkillsMinimalComponentsSkill alt="Nuxt Js" :background="nuxtSkill" />
             <PortfolioSkillsMinimalComponentsSkill alt="JavaScript" :background="jsSkill" />
             <PortfolioSkillsMinimalComponentsSkill alt="Vue Js" :background="vueSkill" />
@@ -64,6 +65,7 @@
     import springSkill from "~/assets/images/skills/spring.webp"
     import tsSkill from "~/assets/images/skills/ts.webp"
     import reactNativeSkill from "~/assets/images/skills/react-native.webp"
+    import angularSkill from "~/assets/images/skills/angular.webp"
     import nuxtSkill from "~/assets/images/skills/nuxt.webp"
     import jsSkill from "~/assets/images/skills/js.webp"
     import vueSkill from "~/assets/images/skills/vue.webp"
@@ -83,6 +85,7 @@
     import dockerSkill from "~/assets/images/skills/docker.webp"
 
 </script>
+
 
 <style scoped>
 
