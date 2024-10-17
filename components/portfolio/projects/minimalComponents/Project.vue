@@ -79,6 +79,7 @@
             "vuejs":"#17631F",
             "nuxtjs":"#39a344",
             "javascript":"#c4b241",
+            "c++":"#ed4cbd"
         }
 
         let color:string = colors[props.lang.trim().toLowerCase()]

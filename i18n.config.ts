@@ -55,7 +55,8 @@ export default defineI18nConfig(() => ({
                         audiobook: "Generate audio from a PDF easily and efficiently using Python libraries.",
                         linkTree:"A personal link-tree made for practicing sass.",
                         shooter:"A game originally created for a classroom activity. In it, you enter a turn-based duel with your friend. ",
-                        postIts:"Create and organize your sticky notes with ease. Get reminders for unfinished tasks."
+                        postIts:"Create and organize your sticky notes with ease. Get reminders for unfinished tasks.",
+                        simpleText:"A simple, lightweight and functional text editor",
                     },
                 },
                 aboutMe: {
@@ -140,6 +141,7 @@ export default defineI18nConfig(() => ({
                         linkTree:"Um link-tree pessoal feito para praticar o sass.",
                         shooter:"Um jogo originalmente criado para uma atividade em sala de aula. Nele, você entra em um duelo em turnos com seu amigo.",
                         postIts:"Crie e organize seus post-its com facilidade. Relembre de tarefas que não foram concluídas.",
+                        simpleText:"Um editor de texto simples, leve e funcional",
                     },
                 },
                 aboutMe: {

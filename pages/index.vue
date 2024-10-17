@@ -9,8 +9,8 @@
             :title="'Super ToolKit'"
             :urlImage="superToolKit"
             :description="$t('portfolio.bestProject.superToolKit')"
-            :urlGithub="'https://github.com/georgejrdev/ToolKit-Development'"
-            :urlDeploy="'https://github.com/georgejrdev/ToolKit-Development'"
+            :urlGithub="'https://github.com/georgejrdev/Super-ToolKit'"
+            :urlDeploy="'https://github.com/georgejrdev/Super-ToolKit'"
             :direction="'row-reverse'"
         />
 
