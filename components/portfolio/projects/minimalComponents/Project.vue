@@ -72,14 +72,15 @@
 
     onMounted(()=>{
         let colors:Record<string,string> = {
-            "java":"#C96A14",
-            "python":"#153380",
-            "php":"#6E14C9",
-            "typescript":"#4e4ef7",
-            "vuejs":"#17631F",
-            "nuxtjs":"#39a344",
-            "javascript":"#c4b241",
-            "c++":"#ed4cbd"
+            "java": "#F89820",
+            "javascript": "#E4C120",      
+            "python": "#3776AB",    
+            "php": "#777BB4",        
+            "typescript": "#3178C6",   
+            "vuejs": "#42B883",        
+            "nuxtjs": "#00DC82",       
+            "c++": "#00599C",          
+            "angular": "#DD0031" 
         }
 
         let color:string = colors[props.lang.trim().toLowerCase()]

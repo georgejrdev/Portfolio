@@ -6,6 +6,16 @@
         <div id="project-container">
 
             <PortfolioProjectsMinimalComponentsProject
+                idContent="project-vocabulary"
+                idAbout="about-vocabulary"
+                :description="$t('portfolio.otherProjects.descriptions.vocabulary')"
+                :urlImage="vocabularyImage"
+                :deployed="true"
+                urlDeploy="https://plus-vocabulary.vercel.app/"
+                lang="Angular"
+            />
+
+            <PortfolioProjectsMinimalComponentsProject
                 idContent="project-audiobook-generator"
                 idAbout="about-audiobook-generator"
                 :description="$t('portfolio.otherProjects.descriptions.audiobook')"
@@ -174,6 +184,7 @@
     import shooterImage from "~/assets/images/projects/shooter.webp"
     import postItsImage from "~/assets/images/projects/postits.webp"
     import simpleTextImage from "~/assets/images/projects/simple-text.webp"
+    import vocabularyImage from "~/assets/images/projects/vocabulary.webp"
 
 </script>
 

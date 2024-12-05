@@ -57,6 +57,7 @@ export default defineI18nConfig(() => ({
                         shooter:"A game originally created for a classroom activity. In it, you enter a turn-based duel with your friend. ",
                         postIts:"Create and organize your sticky notes with ease. Get reminders for unfinished tasks.",
                         simpleText:"A simple, lightweight and functional text editor",
+                        vocabulary:"An effective way to increase your english vocabulary",
                     },
                 },
                 aboutMe: {
@@ -142,6 +143,7 @@ export default defineI18nConfig(() => ({
                         shooter:"Um jogo originalmente criado para uma atividade em sala de aula. Nele, você entra em um duelo em turnos com seu amigo.",
                         postIts:"Crie e organize seus post-its com facilidade. Relembre de tarefas que não foram concluídas.",
                         simpleText:"Um editor de texto simples, leve e funcional",
+                        vocabulary:"Uma forma eficaz de aumentar seu vocabulário em inglês",
                     },
                 },
                 aboutMe: {
