@@ -11,7 +11,7 @@
             <p ref="langText" class="lang">{{ lang }}</p>
 
             <div class="group-buttons">
-                <input v-if="deployed" @click="toLink(props.urlDeploy)" class="project-buttons project-deploy" type="button" value="Deploy">
+                <input v-if="deployed" @click="toLink(props.urlDeploy)" class="project-buttons project-deploy" type="button" :value="$t('portfolio.otherProjects.seeProject')">
                 <input v-if="github" @click="toLink(props.urlGithub)" class="project-buttons project-github" type="button" value="Github">
             </div>
 

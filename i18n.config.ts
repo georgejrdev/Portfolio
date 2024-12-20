@@ -59,6 +59,7 @@ export default defineI18nConfig(() => ({
                         simpleText:"A simple, lightweight and functional text editor",
                         vocabulary:"An effective way to increase your english vocabulary",
                     },
+                    seeProject: "See"
                 },
                 aboutMe: {
                     title: "About me",
@@ -145,6 +146,7 @@ export default defineI18nConfig(() => ({
                         simpleText:"Um editor de texto simples, leve e funcional",
                         vocabulary:"Uma forma eficaz de aumentar seu vocabulário em inglês",
                     },
+                    seeProject: "Ver"
                 },
                 aboutMe: {
                     title: "Sobre mim",
