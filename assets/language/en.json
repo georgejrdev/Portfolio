@@ -1,0 +1,41 @@
+{
+	"app": {
+		"title": {
+			"emphasis":"GEORGE JR.",
+			"line1": "FULLSTACK",
+			"line2": "DEVELOPER"
+		},
+		"nav": {
+			"blog": "BLOG",
+			"projects": "PROJECTS",
+			"contact": "CONTACT",
+			"github": "GITHUB",
+			"linkedin": "LINKEDIN"
+		},
+		"projects": {
+			"swipeText": "SWIPE TO SEE MORE PROJECTS",
+			"description": {
+				"studyPlanner": "The Study Planner is an innovative platform designed to help students efficiently manage their academic activities. With an intuitive interface and comprehensive features, the system allows detailed tracking of attendance, grades, notes, and tasks, making it easier to stay organized and monitor academic performance.",
+				"superToolKit": "Super ToolKit is a comprehensive command-line utility designed to enhance productivity and streamline everyday tasks directly from the terminal. It provides essential tools for developers, system administrators, and power users, simplifying workflows and boosting efficiency.",
+				"vocabulary": "Vocabulary is a platform designed to help users expand their English vocabulary through an interactive, gamified experience. It makes learning new words fun, engaging, and effective, providing a seamless way to improve your vocabulary.",
+				"audiobookGenerator": "The Audiobook Generator is an online tool built with Python that converts PDFs into audiobooks. Using text-to-speech technology, it processes and reads out the content of any uploaded PDF file, providing an efficient way to consume written content hands-free.",
+				"focus": "Focus is a productivity app based on the Pomodoro technique, designed to help users manage their time effectively. It allows you to break tasks into focused intervals, with breaks in between, helping you stay on track and boost your productivity.",
+				"path": "Path is an online platform offering a structured learning roadmap for programming. It provides step-by-step guides for mastering various languages and frameworks, along with progress tracking and resource recommendations to help users stay organized and motivated.",
+				"marioMoCap": "Mario MoCap is a motion capture project developed for a Science Fair demonstration. Using MediaPipe and OpenCV, the system tracks hand and body movements to control in-game actions. It provides an interactive gaming experience by showcasing the power of computer vision and motion capture technology."
+			},
+			"sourceCode": "SOURCE CODE",
+			"visit": "VISIT"
+		},
+		"contact": {
+			"message": {
+				"emphasis": "IT’S ALREADY BEEN",
+				"line1": "OVER 4 YEARS",
+				"line2": "DOING THIS"
+			},
+			"email": {
+				"emphasis": "CONTACT:",
+				"text": "CTT.GEORGEJR@GMAIL.COM"
+			}
+		}
+	}
+}
