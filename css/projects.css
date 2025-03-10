@@ -1,0 +1,122 @@
+#projects {
+    padding-top: 10vh;
+    width: 100%;
+    height: 100vh;
+}
+
+#swipe-text {
+    margin-bottom: 30px;
+    color: var(--static-gray);
+    text-align: center;
+    font-size: 36px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 420px;
+    gap: 50px;
+}
+
+.project-image {
+    width: 50%;
+    height: 100%;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.project-info {
+    width: 50%;
+    height: 100%;
+}
+
+.project-name {
+    margin-top: 10px;
+    font-size: 64px;
+    color: var(--dynamic-text);
+}
+
+.project-description {
+    margin-top: 40px;
+    color: var(--dynamic-text);
+}
+
+.project-technologies {
+    margin-top: 20px;
+    gap: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.technology {
+    padding: 3px 15px 3px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    
+}
+
+.technology p {
+    color: var(--static-black);
+    width: 100%;
+    text-align: center;
+}
+
+.ELECTRON {
+    background-color: var(--static-electron);
+}
+
+.JAVA {
+    background-color: var(--static-java);
+}
+
+.PYTHON {
+    background-color: var(--static-python);
+}
+
+.ANGULAR {
+    background-color: var(--static-angular);
+}
+
+.SPRING {
+    background-color: var(--static-spring);
+}
+
+.JAVASCRIPT {
+    background-color: var(--static-javascript);
+}
+
+.REACTNATIVE {
+    background-color: var(--static-react-native);
+}
+
+.VUEJS {
+    background-color: var(--static-vuejs);
+}
+
+.project-links {
+    margin-top: 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.project-links  > a {
+    text-decoration: none;
+    padding: 5px 15px 5px 15px;
+}
+
+.repo-link {
+    color: var(--static-white);
+    background-color: var(--static-black);
+}
+
+.visit-link {
+    color: var(--static-black);
+    background-color: var(--dynamic-button);
+}

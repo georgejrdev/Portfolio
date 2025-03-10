@@ -10,8 +10,84 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/projects.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/slide.css">
 </head>
 <body>
-    
+    <div id="topbar"></div>
+
+    <header id="header">
+        <h1>
+            <span class="emphasis" id="header-h1-emphasis"></span>
+            <span class="line" id="header-h1-line1"></span>
+            <span class="line" id="header-h1-line2"></span>
+        </h1>
+
+        <div id="skills">
+            <div id="java" class="img"></div>
+            <div id="spring" class="img"></div>
+            <div id="typescript" class="img"></div>
+            <div id="angular" class="img"></div>
+            <div id="react-native" class="img"></div>
+        </div>
+
+        <nav id="navbar">
+            <div id="theme">
+                <input onclick="changeTheme('light')" type="button" value="" id="set-theme-light">
+                <input onclick="changeTheme('dark')" type="button" value="" id="set-theme-dark">
+            </div>
+
+            <div id="links">
+                <a id="link-blog" class="out" href="./blog"></a>
+                <a id="link-projects" href="#projects"></a>
+                <a id="link-contact" href="#contact"></a>
+                <a id="link-github" class="out" rel="noopener noreferrer" href="https://github.com/georgejrdev" target="_blank"></a>
+                <a id="link-linkedin" class="out" rel="noopener noreferrer" href="https://www.linkedin.com/in/georgejrdev/" target="_blank"></a>
+            </div>
+
+            <div id="language">
+                <input onclick="changeLanguage('en')" type="button" value="" id="set-language-en">
+                <input onclick="changeLanguage('pt')" type="button" value="" id="set-language-pt">
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <section id="projects">
+            <p id="swipe-text"></p>
+
+            <div id="slide-container">
+                <div id="slide-bar"></div>
+            
+                <div id="slide-content">
+                    <div onclick="change(false, false)" class="slide-arrow" id="slide-left"><p class="arrow-symbol"><</p></div>
+                    <div onclick="change(false, true)" class="slide-arrow" id="slide-right"><p class="arrow-symbol">></p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>
+                <span class="emphasis" id="contact-h2-emphasis"></span>
+                <span class="line" id="contact-h2-line1"></span>
+                <span class="line" id="contact-h2-line2"></span>
+            </h2>
+
+            <p><span id="contact-email-emphasis"></span> <span id="contact-email"></span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 George Jr.</p>
+    </footer>
+
+    <script src="./javascript/navbar.js"></script>
+    <script src="./javascript/projects.js"></script>
+    <script src="./javascript/slide.js"></script>
+    <script src="./javascript/language.js"></script>
+    <script src="./javascript/theme.js"></script>
 </body>
 </html>
