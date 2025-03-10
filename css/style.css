@@ -7,5 +7,33 @@
 }
 
 :root {
-    
+    --background: #1C1B21;
+    --emphasis-blue: #BCE1ED;
+    --emphasis-green: #83CD29;
+    --static-nav: #151417;
+    --static-white: #FFFFFF;
+    --static-gray: #5E5E5E;
+    --static-black: #000000;
+    --dynamic-text: #FFFFFF;
+    --dynamic-button: #FFFFFF;
+
+    --java-img: url("../assets/img/dark-java.png");
+    --spring-img: url("../assets/img/dark-spring.png");
+    --typescript-img: url("../assets/img/dark-typescript.png");
+    --angular-img: url("../assets/img/dark-angular.png");
+    --react-native-img: url("../assets/img/dark-react-native.png");
+}
+
+body.dark {
+    --background: #FFFFFF;
+    --emphasis-blue: #00ABDE;
+    --emphasis-green: #4D8C00;
+    --dynamic-text: #000000;
+    --dynamic-button: #ADADAD;
+
+    --java-img: url("../assets/img/light-java.png");
+    --spring-img: url("../assets/img/light-spring.png");
+    --typescript-img: url("../assets/img/light-typescript.png");
+    --angular-img: url("../assets/img/light-angular.png");
+    --react-native-img: url("../assets/img/light-react-native.png");
 }
