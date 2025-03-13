@@ -120,3 +120,10 @@ footer {
 footer p {
     color: #FFFFFF;
 }
+
+@media screen and (max-width: 1024px) {
+    header, main {
+        width: 100%;
+        box-sizing: border-box !important;
+    }
+}
