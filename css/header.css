@@ -43,6 +43,18 @@ header {
     background-image: var(--react-native-img);
 }
 
+#github {
+    background-image: var(--github-img);
+}
+
+#linkedin {
+    background-image: var(--linkedin-img);
+}
+
+#portfolio {
+    background-image: var(--portfolio-img);
+}
+
 nav {
     margin-top: 50px;
     width: 800px;

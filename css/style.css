@@ -37,6 +37,13 @@
     --typescript-img: url("../assets/img/dark-typescript.png");
     --angular-img: url("../assets/img/dark-angular.png");
     --react-native-img: url("../assets/img/dark-react-native.png");
+
+    --dynamic-post-even: #312E39;
+    --dynamic-post-odd: #272331;
+
+    --github-img: url("../assets/img/dark-github.png");
+    --linkedin-img: url("../assets/img/dark-linkedin.png");
+    --portfolio-img: url("../assets/img/dark-portfolio.png");
 }
 
 body.light {
@@ -51,6 +58,13 @@ body.light {
     --typescript-img: url("../assets/img/light-typescript.png");
     --angular-img: url("../assets/img/light-angular.png");
     --react-native-img: url("../assets/img/light-react-native.png");
+
+    --dynamic-post-even: #222222;
+    --dynamic-post-odd: #363636;
+
+    --github-img: url("../assets/img/light-github.png");
+    --linkedin-img: url("../assets/img/light-linkedin.png");
+    --portfolio-img: url("../assets/img/light-portfolio.png");
 }
 
 body {

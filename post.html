@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/post.css">
+</head>
+<body id="post">
+    <header>
+        <h1 id="title"></h1>
+
+        <div id="info">
+            <p id="author"></p>
+            <p id="to-references"></p>
+        </div>
+
+        <nav>
+            <input onclick="window.location.href = './blog.html'" type="button" value="" id="back">
+            <input onclick="changeLanguage('en')" type="button" value="" id="set-language-en">
+            <input onclick="changeLanguage('pt')" type="button" value="" id="set-language-pt">
+        </nav>
+
+        <hr>
+    </header>
+
+    <main>
+        <p id="content"></p>
+
+        
+        <hr>
+        <h2 id="references-title"></h2>
+        <div id="references"></div>
+    </main>
+
+    <footer>
+        <p>© 2025 George Jr.</p>
+    </footer>
+
+    <script src="./javascript/language.js"></script>
+    <script type="module" src="./javascript/renderPost.js"></script>
+</body>
+</html>
