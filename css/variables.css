@@ -18,13 +18,13 @@
     --dynamic-img-linkedin: url("../assets/img/dark-linkedin.png");
     --dynamic-img-portfolio: url("../assets/img/dark-portfolio.png");
 
-    --static-nav: #151417;
     --static-white: #FFFFFF;
     --static-gray: #5E5E5E;
+    --static-dark-gray: #1f1f1f;
     --static-black: #000000;
+    --static-nav: #151417;
     --static-slide-inactive: #D9D9D9;
     --static-slide-active: #207693;
-    --static-light-gray: #505050;
 
     --static-java: #fe5d00;
     --static-javascript: #FEC500;

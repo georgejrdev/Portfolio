@@ -32,7 +32,7 @@ header, main {
 }
 
 #author, #to-references {
-    color: var(--static-light-gray);
+    color: var(--static-gray);
     font-size: small;
     font-weight: 400;
 }
