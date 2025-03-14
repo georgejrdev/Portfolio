@@ -9,14 +9,22 @@
 }
 
 #contact-email-emphasis {
-    color: var(--emphasis-green);
+    color: var(--dynamic-emphasis-green);
 }
 
 #contact-email {
-    color: var(--emphasis-blue);
+    color: var(--dynamic-emphasis-blue);
 }
 
 #contact p {
     font-size: 20px;
     text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+    #contact-p {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
 }

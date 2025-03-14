@@ -24,35 +24,35 @@ header {
 }
 
 #java {
-    background-image: var(--java-img);
+    background-image: var(--dynamic-img-java);
 }
 
 #spring {
-    background-image: var(--spring-img);
+    background-image: var(--dynamic-img-spring);
 }
 
 #typescript {
-    background-image: var(--typescript-img);
+    background-image: var(--dynamic-img-typescript);
 }
 
 #angular {
-    background-image: var(--angular-img);
+    background-image: var(--dynamic-img-angular);
 }
 
 #react-native {
-    background-image: var(--react-native-img);
+    background-image: var(--dynamic-img-react-native);
 }
 
 #github {
-    background-image: var(--github-img);
+    background-image: var(--dynamic-img-github);
 }
 
 #linkedin {
-    background-image: var(--linkedin-img);
+    background-image: var(--dynamic-img-linkedin);
 }
 
 #portfolio {
-    background-image: var(--portfolio-img);
+    background-image: var(--dynamic-img-portfolio);
 }
 
 nav {
@@ -78,13 +78,13 @@ nav input {
 }
 
 #set-theme-light {
-    background-image: url("../assets/img/light.png");
+    background-image: var(--static-img-light);
     background-color: var(--static-black);
     background-size: 110%;
 }
 
 #set-theme-dark {
-    background-image: url("../assets/img/dark.png");
+    background-image: var(--static-img-dark);
     background-color: #5D6163;
 }
 
@@ -102,18 +102,40 @@ nav input {
 }
 
 #links a:hover {
-    color: var(--emphasis-green) !important;
+    color: var(--dynamic-emphasis-green) !important;
 }
 
 .out {
-    color: var(--emphasis-blue) !important;
+    color: var(--dynamic-emphasis-blue) !important;
     text-decoration: underline !important;
 }
 
 #set-language-en {
-    background-image: url("../assets/img/eua.png");
+    background-image: var(--static-img-language-en);
 }   
 
 #set-language-pt {
-    background-image: url("../assets/img/brasil.png");
+    background-image: var(--static-img-language-pt);
+}
+
+@media screen and (max-width: 1024px) {
+    nav {
+        margin-top: 0px;
+        width: 90%;
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+    }
+
+    #links {
+        flex-wrap: wrap;
+    }
+
+    .img {
+        width: 40px;
+    }
 }

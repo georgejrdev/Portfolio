@@ -9,9 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/normal-page.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/posts-list.css">
+    <link rel="stylesheet" href="./css/blog.css">
 </head>
 <body id="blog">
     <div id="topbar"></div>
@@ -42,6 +44,7 @@
                 <input onclick="changeTheme('dark')" type="button" value="" id="set-theme-dark">
             </div>
 
+            <input type="text" name="search" id="search">
 
             <div id="language">
                 <input onclick="changeLanguage('en')" type="button" value="" id="set-language-en">
@@ -60,9 +63,11 @@
         <p>© 2025 George Jr.</p>
     </footer>
 
+    <input onclick="backToTop()" type="button" value="" id="back-to-top">
+
     <script src="./javascript/language.js"></script>
     <script src="./javascript/theme.js"></script>
     <script type="module" src="./javascript/renderListPosts.js"></script>
-    <script src="./javascript/toPost.js"></script>
+    <script src="./javascript/backToTop.js"></script>
 </body>
 </html>

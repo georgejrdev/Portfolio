@@ -1,0 +1,65 @@
+:root {
+    --dynamic-background: #1C1B21;
+    --dynamic-emphasis-blue: #BCE1ED;
+    --dynamic-emphasis-green: #83CD29;
+
+    --dynamic-text: #FFFFFF;
+    --dynamic-button: #FFFFFF;
+    --dynamic-post-even: #312E39;
+    --dynamic-post-odd: #272331;
+
+    --dynamic-img-java: url("../assets/img/dark-java.png");
+    --dynamic-img-spring: url("../assets/img/dark-spring.png");
+    --dynamic-img-typescript: url("../assets/img/dark-typescript.png");
+    --dynamic-img-angular: url("../assets/img/dark-angular.png");
+    --dynamic-img-react-native: url("../assets/img/dark-react-native.png");
+
+    --dynamic-img-github: url("../assets/img/dark-github.png");
+    --dynamic-img-linkedin: url("../assets/img/dark-linkedin.png");
+    --dynamic-img-portfolio: url("../assets/img/dark-portfolio.png");
+
+    --static-nav: #151417;
+    --static-white: #FFFFFF;
+    --static-gray: #5E5E5E;
+    --static-black: #000000;
+    --static-slide-inactive: #D9D9D9;
+    --static-slide-active: #207693;
+    --static-light-gray: #505050;
+
+    --static-java: #fe5d00;
+    --static-javascript: #FEC500;
+    --static-spring: #6DB33F;
+    --static-typescript: #3178C6;
+    --static-angular: #C3002F;
+    --static-react-native: #61DAFB;
+    --static-python: #3776AB;
+    --static-electron: #478DCD;
+    --static-vuejs: #41B883;
+    --static-img-language-en: url("../assets/img/eua.png");
+    --static-img-language-pt: url("../assets/img/brasil.png");
+    --static-img-dark: url("../assets/img/dark.png");
+    --static-img-light: url("../assets/img/light.png");
+    --static-img-back: url("../assets/img/back.webp");
+    --static-img-arrow-up: url("../assets/img/arrow-up.png");
+}
+
+body.light {
+    --dynamic-background: #FFFFFF;
+    --dynamic-emphasis-blue: #00ABDE;
+    --dynamic-emphasis-green: #4D8C00;
+
+    --dynamic-text: #000000;
+    --dynamic-button: #ADADAD;
+    --dynamic-post-even: #222222;
+    --dynamic-post-odd: #363636;
+
+    --dynamic-img-java: url("../assets/img/light-java.png");
+    --dynamic-img-spring: url("../assets/img/light-spring.png");
+    --dynamic-img-typescript: url("../assets/img/light-typescript.png");
+    --dynamic-img-angular: url("../assets/img/light-angular.png");
+    --dynamic-img-react-native: url("../assets/img/light-react-native.png");
+
+    --dynamic-img-github: url("../assets/img/light-github.png");
+    --dynamic-img-linkedin: url("../assets/img/light-linkedin.png");
+    --dynamic-img-portfolio: url("../assets/img/light-portfolio.png");
+}

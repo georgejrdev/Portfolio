@@ -176,6 +176,7 @@ if (document.getElementById("home")) {
 if (document.getElementById("blog")) {
     document.getElementById("blog-header-h1-emphasis").innerText = language.blog.title.emphasis
     document.getElementById("blog-header-h1-line1").innerText = language.blog.title.line1
+    document.getElementById("search").placeholder = language.blog.nav.search
 }
 
 if (document.getElementById("post")) {

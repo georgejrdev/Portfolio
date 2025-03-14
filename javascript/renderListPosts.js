@@ -19,41 +19,82 @@ const tagsColor = {
     }
 }
 
-var even = true
+function render(filter = null){
+    var even = true
 
-for (let i = posts.length - 1; i >= 0; i--) {
-    const post = document.createElement("div")
-    post.classList.add("post")
-    post.classList.add("content")
+    for (let i = posts.length - 1; i >= 0; i--) {
 
-    const title = document.createElement("h2")
-    title.innerText = posts[i][language]["title"]
-    title.style.color = posts[i]["titleColor"]
-    title.classList.add("post-title")
-    post.appendChild(title)
+        const linkToPost = document.createElement("a")
+        linkToPost.classList.add("post-link")
+        linkToPost.href = "./post.html?id=" + i
 
-    const tagsContainer = document.createElement("div")
-    tagsContainer.classList.add("tags-container")
+        const post = document.createElement("div")
+        post.classList.add("post")
+        post.classList.add("content")
 
-    for (let j = 0; j < posts[i][language]["tags"].length; j++) {
-        const color = tagsColor[language][posts[i][language]["tags"][j]]
-        const tag = document.createElement("p")
-        tag.classList.add("tag")
-        tag.innerText = posts[i][language]["tags"][j]
-        tag.style.backgroundColor = (color) ? color : "#74bd51"
-        tagsContainer.appendChild(tag)
+        const title = document.createElement("h2")
+        title.innerText = posts[i][language]["title"]
+        title.style.color = posts[i]["titleColor"]
+        title.classList.add("post-title")
+        post.appendChild(title)
+
+        const tagsContainer = document.createElement("div")
+        tagsContainer.classList.add("tags-container")
+
+        let tagFilter = false
+
+        for (let j = 0; j < posts[i][language]["tags"].length; j++) {
+            const color = tagsColor[language][posts[i][language]["tags"][j]]
+            const tag = document.createElement("p")
+            tag.classList.add("tag")
+            tag.innerText = posts[i][language]["tags"][j]
+            tag.style.backgroundColor = (color) ? color : "#74bd51"
+
+            if (filter != null) {
+                if (tag.innerText.toLowerCase().includes(filter.toLowerCase())) {
+                    tagFilter = true
+                }
+            }
+
+            tagsContainer.appendChild(tag)
+        }
+        post.appendChild(tagsContainer)
+
+        if (even) {
+            post.classList.add("post-even")
+            even = false
+        } else {
+            post.classList.add("post-odd")
+            even = true
+        }
+
+        if ((filter != null && filter.trim() !== "") && (
+            !posts[i][language]["title"].toLowerCase().includes(filter.toLowerCase()) &&
+            !posts[i][language]["content"].toLowerCase().includes(filter.toLowerCase()) &&
+            !tagFilter
+        )) {
+            continue
+        }
+
+        linkToPost.appendChild(post)
+        postsContainer.appendChild(linkToPost)
     }
-    post.appendChild(tagsContainer)
-
-    if (even) {
-        post.classList.add("post-even")
-        even = false
-    } else {
-        post.classList.add("post-odd")
-        even = true
-    }
-
-    post.setAttribute(`onclick`, `toPost(${i})`)
-
-    postsContainer.appendChild(post)
 }
+
+function dropAllPosts(){
+    while (postsContainer.firstChild) {
+        postsContainer.removeChild(postsContainer.firstChild)
+    }
+}
+
+document.getElementById("search").addEventListener("input", (e) => {
+    if (e.target.value.trim() === ""){
+        dropAllPosts()
+        render()
+    } else if (e.target.value != null && e.target.value != undefined) {
+        dropAllPosts()
+        render(e.target.value)
+    }
+})
+
+render()
