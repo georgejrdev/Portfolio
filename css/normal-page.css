@@ -86,3 +86,9 @@ footer p {
         width: 90%;
     }
 }
+
+@media screen and (max-width: 800px) {
+    .line {
+        font-size: 40px;
+    }
+}
