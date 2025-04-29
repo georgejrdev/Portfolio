@@ -139,6 +139,26 @@ footer p {
     z-index: 99;
 }
 
+img {
+    margin: auto;
+    width: 100%;
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.code {
+    width: 100%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px;
+    border-radius: 5px;
+    font-family: "JetBrains Mono", monospace;
+    color: var(--static-white);
+    background-color: var(--static-dark-gray);
+}
+
 @media screen and (max-width: 1024px) {
     header, main {
         width: 100%;
