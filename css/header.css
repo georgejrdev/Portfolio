@@ -18,7 +18,6 @@ header {
 .img {
     width: 60px;
     height: 60px;
-    background-position: right;
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -39,8 +38,9 @@ header {
     background-image: var(--dynamic-img-angular);
 }
 
-#react-native {
-    background-image: var(--dynamic-img-react-native);
+#golang {
+    width: 95px;
+    background-image: var(--dynamic-img-golang);
 }
 
 #github {
@@ -137,5 +137,10 @@ nav input {
 
     .img {
         width: 40px;
+        background-position: right;
+    }
+
+    #golang {
+        width: 75px;
     }
 }

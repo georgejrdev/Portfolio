@@ -12,7 +12,7 @@
     --dynamic-img-spring: url("../assets/img/dark-spring.png");
     --dynamic-img-typescript: url("../assets/img/dark-typescript.png");
     --dynamic-img-angular: url("../assets/img/dark-angular.png");
-    --dynamic-img-react-native: url("../assets/img/dark-react-native.png");
+    --dynamic-img-golang: url("../assets/img/dark-golang.png");
 
     --dynamic-img-github: url("../assets/img/dark-github.png");
     --dynamic-img-linkedin: url("../assets/img/dark-linkedin.png");
@@ -57,7 +57,7 @@ body.light {
     --dynamic-img-spring: url("../assets/img/light-spring.png");
     --dynamic-img-typescript: url("../assets/img/light-typescript.png");
     --dynamic-img-angular: url("../assets/img/light-angular.png");
-    --dynamic-img-react-native: url("../assets/img/light-react-native.png");
+    --dynamic-img-golang: url("../assets/img/light-golang.png");
 
     --dynamic-img-github: url("../assets/img/light-github.png");
     --dynamic-img-linkedin: url("../assets/img/light-linkedin.png");
